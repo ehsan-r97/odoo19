@@ -1,28 +1,119 @@
-# 📘 Odoo 19 Full‑Stack Installation on WSL2 Ubuntu 24.04
-
-This guide sets up **Odoo 19** with **PostgreSQL 16**, **Nginx**, **Iranian mirrors**, a custom **Zsh** environment, and all AI‑readiness requirements (pgvector) on **Windows 10/11 WSL2**.
-
-All credentials and paths are pre‑configured:
-
-- Ubuntu username: `odoo19`
-- Project directory: `/home/odoo19/odoo19`
-- PostgreSQL user: `odoo19`  
-  Passwords: **`999239`**
-- Odoo port: **8019** (internal)  
-  Nginx listens on port **80** → `http://localhost`
-
-The repository is cloned from `https://gitlab.chabokan.net/ehsan.r97/odoo19.git` and already contains `custom_addons`, `filestore`, `logs`, `backups` and a pre‑configured `odoo.conf` with `http_port = 8019`, as well as a convenient startup script `start_odoo.sh`.
+Here is the complete, comprehensive `README.md` file for your Odoo 19 repository. This document covers every aspect of your architecture, installation, configuration, and maintenance.
 
 ---
 
-## 1. System Update & Iranian Mirrors
+# 📘 Odoo 19 Full-Stack Installation Guide
 
-### Optional – Iranian APT mirror
+## 🏗️ Architecture Overview
 
-If your internet is restricted, replace the default repositories:
+This guide sets up **Odoo 19** with a production-grade architecture on **Ubuntu 24.04 LTS** (compatible with WSL2 and Docker):
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        CLIENT (Browser)                         │
+└────────────────────────────┬────────────────────────────────────┘
+                             │ HTTP (Port 80)
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    NGINX (Reverse Proxy)                        │
+│  • SSL Termination        • Static Asset Caching               │
+│  • Gzip Compression       • WebSocket Routing (/websocket)      │
+│  • Longpolling (/longpolling → Port 8072)                      │
+└────────────────────────────┬────────────────────────────────────┘
+                             │ Proxy (Port 8019)
+                             ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                  ODOO 19 (Multi-Worker Mode)                    │
+│  • 4 HTTP Workers + 2 Cron Threads                             │
+│  • Memory Limits (Soft: 2GB, Hard: 2.5GB)                      │
+│  • Redis Sessions (Port 6379)                                  │
+│  • Proxy Mode Enabled                                          │
+└──────────┬─────────────────────────────────────┬────────────────┘
+           │                                     │
+           ▼                                     ▼
+┌─────────────────────┐              ┌─────────────────────────┐
+│   PGBOUNCER         │              │        REDIS            │
+│   (Port 6432)       │              │      (Port 6379)        │
+│   Connection Pool   │              │   Session Store         │
+│   Session Mode      │              │   ORM Cache             │
+└──────────┬──────────┘              └─────────────────────────┘
+           │
+           ▼
+┌─────────────────────────────────────────────────────────────────┐
+│              POSTGRESQL 16 (Port 5432)                          │
+│  • pgvector Extension (AI/RAG)                                 │
+│  • Optimized Memory Settings                                   │
+│  • External Access Enabled                                     │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📋 Prerequisites
+
+| Component | Version | Purpose |
+|-----------|---------|---------|
+| Ubuntu | 24.04 LTS (Noble) | Operating System |
+| Python | 3.12 | Odoo Runtime |
+| PostgreSQL | 16 | Database |
+| pgvector | 0.8+ | AI/RAG Vector Search |
+| PgBouncer | 1.22+ | Connection Pooling |
+| Redis | 7+ | Session Management |
+| Nginx | 1.24+ | Reverse Proxy |
+| Node.js | 18+ | Asset Compilation |
+| wkhtmltopdf | 0.12.6.1 (patched) | PDF Report Generation |
+
+---
+
+## 🚫 What You Should NOT Do
+
+| ❌ Do NOT | ✅ Do Instead |
+|-----------|---------------|
+| Run Odoo as `root` or with `sudo` | Use the dedicated `odoo19` system user |
+| Use PostgreSQL 18 | Stick to PostgreSQL 16 for stability |
+| Install `wkhtmltopdf` via `apt` | Use the patched `.deb` from GitHub releases |
+| Expose PostgreSQL directly to the internet | Use PgBouncer and firewall rules |
+| Use standard `git clone` for large repos | Use `--depth 1 --shallow-submodules` |
+| Store passwords in plain text in scripts | Use environment variables or secure configs |
+| Skip `pgvector` installation | Required for AI/RAG features in Odoo 19 |
+
+---
+
+## 🔑 Credentials Reference
+
+| Item | Value |
+|------|-------|
+| Ubuntu username | `odoo19` |
+| Project directory | `/home/odoo19/odoo19` |
+| PostgreSQL user | `odoo19` |
+| PostgreSQL password | `999239` |
+| Odoo Master Password | `999239` |
+| Odoo internal port | `8019` |
+| PgBouncer port | `6432` |
+| Redis port | `6379` |
+| Nginx port | `80` |
+| Longpolling port | `8072` |
+| GitHub repository | `https://github.com/ehsan-r97/odoo19.git` |
+
+---
+
+## 📦 Step-by-Step Installation
+
+### Phase 1: System Preparation
+
+```bash
+# Update and upgrade system packages
+sudo apt update && sudo apt upgrade -y
+
+# Install core build tools
+sudo apt install -y build-essential git wget curl rsync software-properties-common
+```
+
+#### Optional: Iranian APT Mirror (for restricted networks)
 
 ```bash
 sudo cp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources.bak
+
 sudo tee /etc/apt/sources.list.d/ubuntu.sources > /dev/null <<'EOF'
 Types: deb deb-src
 URIs: https://mirror.mobinhost.com/ubuntu/
@@ -36,589 +127,219 @@ Suites: noble-security
 Components: main restricted universe multiverse
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 EOF
+
 sudo apt update
 ```
 
-### Upgrade & install base tools
+---
+
+### Phase 2: PostgreSQL 16 & AI Readiness (pgvector)
 
 ```bash
-sudo apt upgrade -y
-sudo apt install -y build-essential git wget curl rsync
+# 1. Add the official PostgreSQL repository
+sudo install -d /usr/share/postgresql-common/pgdg
+sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail \
+    https://www.postgresql.org/media/keys/ACCC4CF8.asc
+
+echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] \
+    https://apt.postgresql.org/pub/repos/apt noble-pgdg main" | \
+    sudo tee /etc/apt/sources.list.d/pgdg.list
+
+# 2. Install PostgreSQL 16 with pgvector
+sudo apt update
+sudo apt install -y postgresql-16 postgresql-client-16 postgresql-16-pgvector
+
+# 3. Start PostgreSQL and create the Odoo user
+sudo pg_ctlcluster 16 main start
+sudo -u postgres psql -c "CREATE USER odoo19 WITH PASSWORD '999239' CREATEDB SUPERUSER;"
+
+# 4. Enable the Vector extension for AI/RAG features
+sudo -u postgres psql -d template1 -c "CREATE EXTENSION IF NOT EXISTS vector;"
 ```
 
-(`rsync` is required for PyCharm WSL integration.)
+#### PostgreSQL Performance & External Access Configuration
+
+```bash
+# Configure memory settings for AI/Vector operations
+sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/" \
+    /etc/postgresql/16/main/postgresql.conf
+
+sudo sed -i "s/#maintenance_work_mem = 64MB/maintenance_work_mem = 2GB/" \
+    /etc/postgresql/16/main/postgresql.conf
+
+sudo sed -i "s/#shared_buffers = 128MB/shared_buffers = 4GB/" \
+    /etc/postgresql/16/main/postgresql.conf
+
+sudo sed -i "s/#work_mem = 4MB/work_mem = 128MB/" \
+    /etc/postgresql/16/main/postgresql.conf
+
+# Allow external connections (for DBeaver, pgAdmin, etc.)
+echo "host    all             all             0.0.0.0/0               scram-sha-256" | \
+    sudo tee -a /etc/postgresql/16/main/pg_hba.conf
+
+# Allow PgBouncer to connect via MD5
+sudo sed -i '/^local.*all.*postgres.*peer/i host    all             all             127.0.0.1/32            md5' \
+    /etc/postgresql/16/main/pg_hba.conf
+
+# Restart PostgreSQL
+sudo pg_ctlcluster 16 main restart
+```
 
 ---
 
-## 2. Install & Configure PostgreSQL 16
+### Phase 3: PgBouncer (Connection Pooling)
 
 ```bash
-sudo apt install -y postgresql postgresql-contrib
-sudo service postgresql start
-```
+# 1. Install PgBouncer
+sudo apt install -y pgbouncer
 
-Create the database user:
+# 2. Configure PgBouncer
+sudo tee /etc/pgbouncer/pgbouncer.ini > /dev/null <<'EOF'
+[databases]
+* = host=127.0.0.1 port=5432
 
-```bash
-sudo -i -u postgres
-createuser odoo19 --createdb --pwprompt
-# password: 999239 (enter twice)
-psql -c "ALTER USER odoo19 WITH SUPERUSER;"
-psql -c "ALTER USER postgres WITH PASSWORD '999239';"
-exit
-```
+[pgbouncer]
+listen_port = 6432
+listen_addr = 127.0.0.1
+auth_type = md5
+auth_file = /etc/pgbouncer/userlist.txt
+pool_mode = session
+max_client_conn = 500
+default_pool_size = 50
+ignore_startup_parameters = extra_float_digits
+EOF
 
-Verify:
+# 3. Generate the secure password hash
+echo '"odoo19" "md5'$(echo -n '999239odoo19' | md5sum | cut -d' ' -f1)'"' | \
+    sudo tee /etc/pgbouncer/userlist.txt
 
-```bash
-sudo service postgresql status   # should show "online"
+# 4. Set permissions
+sudo chown postgres:postgres /etc/pgbouncer/userlist.txt
+sudo chmod 600 /etc/pgbouncer/userlist.txt
+
+# 5. Restart PgBouncer
+sudo service pgbouncer restart
 ```
 
 ---
 
-## 3. Install System Packages for Odoo
+### Phase 4: Redis (Session Management)
 
 ```bash
+# Install Redis
+sudo apt install -y redis-server
+
+# Start and enable Redis
+sudo service redis-server start
+sudo systemctl enable redis-server
+
+# Verify Redis is running
+redis-cli ping
+# Should return: PONG
+```
+
+---
+
+### Phase 5: System Dependencies & wkhtmltopdf
+
+```bash
+# 1. Install Python 3.12 and all C-libraries
 sudo apt install -y \
-    python3.12 python3.12-dev python3.12-venv python3-pip \
+    python3.12 python3.12-venv python3.12-dev python3-pip \
     libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev \
-    libssl-dev libjpeg-dev libjpeg8-dev libpq-dev \
-    libffi-dev libfreetype6-dev liblcms2-dev libblas-dev libatlas-base-dev \
-    libtiff5-dev libwebp-dev libharfbuzz-dev libfribidi-dev \
-    libxcb1-dev zlib1g-dev libzip-dev \
-    nodejs npm node-less \
-    xfonts-75dpi xfonts-base \
-    wkhtmltopdf
+    libssl-dev libjpeg-dev libpq-dev libffi-dev \
+    libfreetype-dev liblcms2-dev libtiff5-dev libwebp-dev \
+    nodejs npm node-less xfonts-75dpi xfonts-base
+
+# 2. Download and install the patched wkhtmltopdf
+wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.jammy_amd64.deb
+sudo dpkg -i wkhtmltox_0.12.6.1-3.jammy_amd64.deb
+sudo apt --fix-broken install -y
+rm wkhtmltox_0.12.6.1-3.jammy_amd64.deb
+
+# 3. Verify wkhtmltopdf installation
+wkhtmltopdf --version
+# Should output: wkhtmltopdf 0.12.6.1 (with patched qt)
 ```
 
 ---
 
-## 4. Iranian npm Mirror & Global Packages
+### Phase 6: Odoo User, Repository & Python Environment
 
 ```bash
-npm config set registry https://mirror2.chabokan.net/npm/
-sudo npm install -g less less-plugin-clean-css rtlcss
-npm config delete registry   # optional, restore default
-```
+# 1. Create the dedicated system user
+sudo useradd -m -s /bin/bash odoo19
+echo "odoo19:999239" | sudo chpasswd
 
----
+# 2. Switch to the odoo19 user
+sudo su - odoo19
 
-## 5. Verify wkhtmltopdf
+# 3. Configure Git for SSH and submodules
+mkdir -p ~/.ssh
+cat << 'EOF' > ~/.ssh/config
+Host github.com
+    ServerAliveInterval 60
+    ServerAliveCountMax 30
+EOF
+chmod 600 ~/.ssh/config
 
-Yenthe’s script checks symlinks – we do the same:
+# Force Git to use SSH for all GitHub URLs (required for submodules)
+git config --global url."git@github.com:".insteadOf "https://github.com/"
 
-```bash
-if [ -x /usr/local/bin/wkhtmltopdf ] && ! command -v wkhtmltopdf >/dev/null 2>&1; then
-    sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin || true
-fi
-if [ -x /usr/local/bin/wkhtmltoimage ] && ! command -v wkhtmltoimage >/dev/null 2>&1; then
-    sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin || true
-fi
-```
+# 4. Clone the repository with submodules (Blobless to prevent timeouts)
+git clone --filter=blob:none --depth 1 --shallow-submodules \
+    git@github.com:ehsan-r97/odoo19.git
 
-Confirm: `wkhtmltopdf --version`
-
----
-
-## 6. Install Zsh & EhsanDEV Terminal
-
-```bash
-sudo apt install -y zsh figlet toilet fortune-mod cowsay lolcat neofetch
-sudo apt install -y bat eza tree htop ncdu
-sudo apt install -y zsh-syntax-highlighting zsh-autosuggestions
-sudo apt install -y ripgrep fd-find fzf
-
-chsh -s $(which zsh)
-```
-
-Create `~/.zshrc` with the EhsanDEV configuration below, then launch `zsh`.
-
-<details>
-<summary>Click to expand EhsanDEV .zshrc</summary>
-
-```bash
-# ╔══════════════════════════════════════════════════════════╗
-# ║                                                          ║
-# ║  ███████╗██╗  ██╗███████╗ █████╗ ███╗   ██╗██████╗ ████
-# ║  ██╔════╝██║  ██║██╔════╝██╔══██╗████╗  ██║██╔══██╗██╔══╝
-# ║  █████╗  ███████║█████╗  ███████║██╔██╗ ██║██║  ██║█████╗
-# ║  ██╔══╝  ██╔══██║██╔══╝  ██╔══██║██║╚██╗██║██║  ██║██╔══╝
-# ║  ██║     ██║  ██║███████╗██║  ██║██║ ╚████║██████╔╝██████╗
-# ║  ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═════╝
-# ║                                                          ║
-# ╚══════════════════════════════════════════════════════════╝
-
-# ===== 🌟 EhsanDEV INITIALIZATION =====
-autoload -U colors && colors
-export TERM=xterm-256color
-
-# ===== 🎭 ROBUST WELCOME SCREEN =====
-welcome_message() {
-    clear
-    echo ""
-    echo "╔══════════════════════════════════════════════════════════╗"
-    echo "║                    EhsanDEV Terminal                    ║"
-    echo "╚══════════════════════════════════════════════════════════╝"
-    echo ""
-    
-    if command -v toilet &> /dev/null; then
-        date "+%A, %B %d %Y | %I:%M:%S %p" | toilet -f term -F border --gay
-    else
-        echo "┌────────────────────────────────────────────┐"
-        echo "│ $(date '+%A, %B %d %Y | %I:%M:%S %p') │"
-        echo "└────────────────────────────────────────────┘"
-    fi
-    
-    echo ""
-    echo "🚀 Welcome to the ultimate terminal experience!"
-    echo "💡 Type 'ehsanhelp' for all available commands"
-    echo ""
-}
-
-if [[ -z "$EHSANDEV_LOADED" ]]; then
-    welcome_message
-    export EHSANDEV_LOADED=1
-fi
-
-# ===== 🎨 DYNAMIC COLOR PROMPT =====
-PROMPT_THEME=2
-
-set_prompt() {
-    case $PROMPT_THEME in
-        1)
-            PROMPT="%F{blue}┌─%f%F{white}[%f%F{cyan}%n%f%F{white}@%f%F{green}%m%f%F{white}]%f%F{blue}─[%f%F{yellow}%~%f%F{blue}]%f"$'\n'"%F{blue}└─%f%F{white}➜%f "
-            RPROMPT="%F{cyan}🕐 %*%f"
-            ;;
-        2)
-            PROMPT="%F{red}╭─%f%F{yellow}[%f%F{green}%n%f%F{yellow}@%f%F{magenta}%m%f%F{yellow}]%f%F{red}─[%f%F{cyan}%~%f%F{red}]%f"$'\n'"%F{red}╰─%f%F{white}✦%f "
-            RPROMPT="%F{magenta}⏰ %*%f"
-            ;;
-        3)
-            PROMPT="%F{242}%n@%m:%f%F{blue}%~%f %F{white}❯%f "
-            RPROMPT="%F{245}[%*]%f"
-            ;;
-        4)
-            PROMPT="%F{240}┌─%f%F{245}[%f%F{250}%n%f%F{245}@%f%F{253}%m%f%F{245}]%f%F{240}─[%f%F{248}%~%f%F{240}]%f"$'\n'"%F{240}└─%f%F{white}▶%f "
-            RPROMPT="%F{244}⌚ %*%f"
-            ;;
-    esac
-}
-
-set_prompt
-
-function prompt-theme() {
-    if [[ "$1" =~ ^[1-4]$ ]]; then
-        PROMPT_THEME=$1
-        set_prompt
-        echo "Theme changed to $1"
-    else
-        echo "Available themes:"
-        echo "  1 - Professional Blue"
-        echo "  2 - Vibrant Rainbow"
-        echo "  3 - Minimal Gray"
-        echo "  4 - Dark Theme"
-        echo "Usage: prompt-theme <1-4>"
-    fi
-}
-
-# ===== ⚡ TERMINAL TITLE =====
-case $TERM in
-    xterm*|rxvt*|alacritty*|kitty*)
-        precmd() { print -Pn "\e]0;EhsanDEV :: %n @ %m :: %~\a" }
-        preexec() { print -Pn "\e]0;EhsanDEV :: $1 :: %~\a" }
-        ;;
-esac
-
-# ===== 🎨 SYNTAX HIGHLIGHTING =====
-if [[ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    ZSH_HIGHLIGHT_STYLES[default]='fg=cyan'
-    ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
-    ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=magenta,bold'
-    ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
-    ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow,bold'
-    ZSH_HIGHLIGHT_STYLES[function]='fg=blue,bold'
-    ZSH_HIGHLIGHT_STYLES[command]='fg=green'
-    ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,underline'
-    ZSH_HIGHLIGHT_STYLES[path]='fg=cyan,underline'
-    ZSH_HIGHLIGHT_STYLES[globbing]='fg=red'
-fi
-
-# ===== 💭 AUTOSUGGESTIONS =====
-if [[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#555555"
-    ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-    bindkey '^ ' autosuggest-accept
-else
-    bindkey '^R' history-incremental-search-backward
-fi
-
-# ===== 🎯 COMPLETION =====
-autoload -Uz compinit
-compinit -i
-zstyle ':completion:*' menu select
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-zstyle ':completion:*' completer _expand _complete _ignored _approximate
-zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
-
-# ===== 🚀 ALIASES =====
-alias ls='ls --color=auto -F'
-alias ll='ls -la --color=auto'
-alias la='ls -A --color=auto'
-alias l='ls -CF --color=auto'
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias diff='diff --color=auto'
-alias ip='ip -color'
-
-if command -v eza &> /dev/null; then
-    alias ls='eza --icons --group-directories-first'
-fi
-if command -v bat &> /dev/null; then
-    alias cat='bat --style=grid --theme=TwoDark'
-fi
-if command -v fd-find &> /dev/null; then
-    alias find='fd-find'
-elif command -v fdfind &> /dev/null; then
-    alias find='fdfind'
-fi
-if command -v rg &> /dev/null; then
-    alias rg='ripgrep'
-fi
-
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias ~='cd ~'
-alias -- -='cd -'
-alias c='clear'
-alias cls='clear'
-
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-alias df='df -h'
-alias du='du -h'
-alias free='free -h'
-alias meminfo='free -m -l -t'
-alias psmem='ps auxf | sort -nr -k 4 | head -20'
-alias pscpu='ps auxf | sort -nr -k 3 | head -20'
-
-alias ports='netstat -tulanp'
-alias myip='curl -s ifconfig.me'
-alias ping='ping -c 5'
-
-alias g='git'
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gd='git diff'
-alias gl='git log --oneline --graph --decorate --all'
-alias gp='git push'
-alias gpl='git pull'
-
-if command -v lolcat &> /dev/null; then
-    alias rainbow='echo "🌈 RAINBOW MODE ACTIVATED 🌈" | lolcat'
-    alias colorize='lolcat'
-else
-    alias rainbow='echo "🌈 RAINBOW MODE ACTIVATED 🌈"'
-    alias colorize='cat'
-fi
-if command -v neofetch &> /dev/null; then
-    alias sysinfo='neofetch --ascii_distro ubuntu'
-else
-    alias sysinfo='echo "System: $(uname -a)"'
-fi
-
-alias h='history'
-alias path='echo -e ${PATH//:/\\n}'
-alias now='date +"%T"'
-alias nowdate='date +"%d-%m-%Y"'
-alias extract='tar -xvf'
-alias compress='tar -czvf'
-alias sizes='du -sh * | sort -hr'
-alias findbig='find . -type f -size +100M -exec ls -lh {} \;'
-
-# ===== 🎮 FUNCTIONS =====
-function listdir() {
-    if command -v eza &> /dev/null; then
-        eza --icons --long --all --group-directories-first "$@"
-    else
-        ls -la --color=always "$@" | awk '
-            BEGIN {
-                color["d"]="\033[1;34m"
-                color["l"]="\033[1;36m"
-                color["-"]="\033[1;37m"
-                reset="\033[0m"
-            }
-            NR==1 {print}
-            NR>1 {
-                type=substr($1,1,1)
-                $1=color[type] $1 reset
-                print
-            }
-        '
-    fi
-}
-
-function recho() {
-    if command -v lolcat &> /dev/null; then
-        echo "$@" | lolcat
-    else
-        echo "$@"
-    fi
-}
-
-function ehsanhelp() {
-    echo ""
-    echo "╔══════════════════════════════════════════════════════════╗"
-    echo "║                 EhsanDEV Terminal Help                  ║"
-    echo "╚══════════════════════════════════════════════════════════╝"
-    echo ""
-    echo "🎨 THEME CONTROL:"
-    echo "  prompt-theme 1    Professional Blue"
-    echo "  prompt-theme 2    Vibrant Rainbow"
-    echo "  prompt-theme 3    Minimal Gray"
-    echo "  prompt-theme 4    Dark Theme"
-    echo ""
-    echo "📁 NAVIGATION:"
-    echo "  listdir          Colorful directory listing"
-    echo "  .. / ...         Quick navigation"
-    echo "  sizes            Show folder sizes"
-    echo "  findbig          Find large files"
-    echo ""
-    echo "🎭 FUN COMMANDS:"
-    echo "  recho <text>     Rainbow colored text"
-    echo "  rainbow          Rainbow display"
-    echo "  banner <text>    ASCII banner"
-    echo "  sysinfo          System information"
-    echo ""
-    echo "⚡ SYSTEM:"
-    echo "  meminfo          Memory info"
-    echo "  psmem / pscpu    Process monitoring"
-    echo "  myip             Public IP"
-    echo "  ports            Open ports"
-    echo ""
-    echo "🔧 DEVELOPMENT:"
-    echo "  gs / ga / gc     Git shortcuts"
-    echo "  extract / compress Tar operations"
-    echo ""
-    echo "💡 TIPS:"
-    echo "  • Use Ctrl+R for history search"
-    echo "  • Tab completion is enhanced"
-    echo "  • Right side shows current time"
-    echo ""
-}
-
-function greet() {
-    echo ""
-    if command -v figlet &> /dev/null; then
-        figlet "Welcome $USER!" 2>/dev/null || echo "Welcome $USER!"
-    else
-        echo "┌─────────────────┐"
-        echo "│ Welcome $USER! │"
-        echo "└─────────────────┘"
-    fi
-    if command -v cowsay &> /dev/null && command -v fortune &> /dev/null; then
-        fortune -s | cowsay -f tux 2>/dev/null || echo "Have an awesome day!"
-    else
-        echo "✨ Have an awesome day! ✨"
-    fi
-    echo ""
-}
-
-function search() {
-    if [[ -z "$1" ]]; then
-        echo "Usage: search <pattern>"
-        return
-    fi
-    grep -r "$1" . --color=auto
-}
-
-function sizegraph() {
-    du -sh * | sort -hr | awk '
-        BEGIN {
-            print "╔══════════════════════════════════════════╗"
-            print "║          Directory Size Chart           ║"
-            print "╚══════════════════════════════════════════╝"
-            print ""
-        }
-        {
-            size=$1
-            name=$2
-            printf "%-40s %10s\n", name, size
-        }
-    '
-}
-
-function quickhist() {
-    history | tail -30 | awk '{ printf "%5d  %s\n", $1, substr($0, index($0,$2)) }'
-}
-
-# ===== ⌨️ KEY BINDINGS =====
-bindkey -e
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
-bindkey '^R' history-incremental-search-backward
-bindkey '^T' history-incremental-search-forward
-bindkey '^U' backward-kill-line
-bindkey '^W' backward-kill-word
-bindkey '^Y' yank
-bindkey '^[[3~' delete-char
-
-# ===== 📜 HISTORY =====
-HISTSIZE=1000000
-SAVEHIST=1000000
-HISTFILE=~/.zsh_history
-setopt append_history
-setopt extended_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt hist_verify
-setopt inc_append_history
-setopt share_history
-
-# ===== 🌍 ENVIRONMENT =====
-export EDITOR=nano
-export VISUAL=nano
-export PAGER=less
-export LESS='-R -i -j5'
-export PATH="$HOME/.local/bin:$PATH"
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43'
-
-# ===== 🚀 FINAL SETUP =====
-echo ""
-echo "🎨 EhsanDEV Terminal Ready!"
-echo "💡 Type 'ehsanhelp' for command guide"
-echo "✨ Current theme: $PROMPT_THEME (change with 'prompt-theme')"
-echo ""
-```
-
-</details>
-
----
-
-## 7. Clone Your Odoo Repository
-
-```bash
-cd ~
-git clone https://gitlab.chabokan.net/ehsan.r97/odoo19.git
 cd odoo19
-```
 
-The repository already contains a `start_odoo.sh` script (see step 13).
-
----
-
-## 8. Python Virtual Environment & Dependencies
-
-### Iranian pip mirror (optional)
-
-```bash
-export PIP_INDEX_URL=https://mirror2.chabokan.net/pypi/simple/
-```
-
-### Setup
-
-```bash
+# 5. Create and activate the Python virtual environment
 python3.12 -m venv venv
 source venv/bin/activate
 
+# 6. Install Python dependencies
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
-```
-
-If `openpyxl==3.1.2` fails:
-
-```bash
-pip install openpyxl==3.1.5
-pip install -r requirements.txt
-```
-
-### Extra: phonenumbers (required for phone validation)
-
-```bash
 pip install phonenumbers
-```
 
-You can now unset the mirror: `unset PIP_INDEX_URL`
-
----
-
-## 9. Make `odoo-bin` Executable & Verify Folders
-
-```bash
-chmod +x odoo-bin
-mkdir -p custom_addons filestore logs backups
-```
-
-Also ensure the startup script is executable (it should be already from the repo):
-
-```bash
-chmod +x start_odoo.sh
+# 7. Exit back to your main admin user
+exit
 ```
 
 ---
 
-## 10. PostgreSQL AI Readiness (pgvector)
-
-For Odoo 19 AI features (RAG / vector search), you must enable the **vector** extension.
-
-### Install pgvector package
+### Phase 7: Configuration & Permissions
 
 ```bash
-sudo apt install -y postgresql-16-pgvector
+# 1. Ensure directories exist
+sudo mkdir -p /home/odoo19/odoo19/{custom_addons,filestore,logs,backups}
+
+# 2. Transfer ownership to the odoo19 user
+sudo chown -R odoo19:odoo19 /home/odoo19/odoo19
+
+# 3. Secure the configuration file
+sudo chmod 600 /home/odoo19/odoo19/odoo.conf
+
+# 4. Make scripts executable
+sudo chmod +x /home/odoo19/odoo19/start_odoo.sh
+sudo chmod +x /home/odoo19/odoo19/odoo-bin
 ```
-
-### Enable the extension on your Odoo database
-
-Make sure PostgreSQL is running, then:
-
-```bash
-sudo -u postgres psql
-```
-
-Inside the PostgreSQL prompt:
-
-```sql
-\c odoo19          -- or your actual database name
-CREATE EXTENSION IF NOT EXISTS vector;
-\q
-```
-
-Restart Odoo after this change. The AI module will now install without the RAG‑related error.
 
 ---
 
-## 11. Install & Configure Nginx
-
-### Install
+### Phase 8: Nginx (Reverse Proxy)
 
 ```bash
+# 1. Install Nginx
 sudo apt install -y nginx
-```
 
-### Create Nginx site configuration
-
-```bash
-sudo nano /etc/nginx/sites-available/odoo
-```
-
-Paste the following production‑ready configuration (adapted from the Yenthe script):
-
-```nginx
+# 2. Deploy the optimized configuration
+sudo tee /etc/nginx/sites-available/odoo19 > /dev/null <<'EOF'
 upstream odoo {
     server 127.0.0.1:8019;
 }
 
 upstream odoochat {
-    server 127.0.0.1:8019;   # longpolling (same for now)
+    server 127.0.0.1:8072;
 }
 
 server {
@@ -629,26 +350,16 @@ server {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header X-Real-IP $remote_addr;
-    add_header X-Frame-Options "SAMEORIGIN";
-    add_header X-XSS-Protection "1; mode=block";
-    proxy_set_header X-Client-IP $remote_addr;
-
-    access_log /var/log/nginx/odoo-access.log;
-    error_log  /var/log/nginx/odoo-error.log;
-
-    proxy_buffers 16 64k;
-    proxy_buffer_size 128k;
+    
+    client_max_body_size 0;
     proxy_read_timeout 900s;
     proxy_connect_timeout 900s;
     proxy_send_timeout 900s;
-    proxy_next_upstream error timeout invalid_header http_500 http_502 http_503;
-
-    client_max_body_size 0;
 
     gzip on;
     gzip_min_length 1100;
     gzip_buffers 4 32k;
-    gzip_types text/css text/less text/plain text/xml application/xml application/json application/javascript application/pdf image/jpeg image/png;
+    gzip_types text/css text/less text/plain text/xml application/xml application/json application/javascript;
     gzip_vary on;
 
     location / {
@@ -659,106 +370,372 @@ server {
     location /longpolling {
         proxy_pass http://odoochat;
     }
+    
+    location /websocket {
+        proxy_pass http://odoochat;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
 
-    location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
         expires 2d;
         proxy_pass http://odoo;
         add_header Cache-Control "public, no-transform";
     }
-
-    location ~ /[a-zA-Z0-9_-]*/static/ {
-        proxy_cache_valid 200 302 60m;
-        proxy_cache_valid 404 1m;
-        proxy_buffering on;
-        expires 864000;
-        proxy_pass http://odoo;
-    }
 }
-```
+EOF
 
-### Enable site & restart Nginx
-
-```bash
-sudo ln -s /etc/nginx/sites-available/odoo /etc/nginx/sites-enabled/
-sudo rm /etc/nginx/sites-enabled/default   # remove default welcome page
+# 3. Enable the site and restart Nginx
+sudo ln -s /etc/nginx/sites-available/odoo19 /etc/nginx/sites-enabled/
+sudo rm -f /etc/nginx/sites-enabled/default
 sudo nginx -t
-sudo service nginx reload
+sudo systemctl restart nginx
 ```
 
 ---
 
-## 12. Enable Odoo Proxy Mode
-
-Add this line to `~/odoo19/odoo.conf` under `[options]`:
-
-```ini
-proxy_mode = True
-```
-
-(If the file already contains it, no change needed.)
-
----
-
-## 13. Start Odoo (using the convenience script)
-
-Your repository contains `start_odoo.sh` which already:
-
-- Changes to the project directory.
-- Activates the virtual environment.
-- Checks if PostgreSQL is running (starts it if necessary).
-- Launches Odoo with console logging (`--log-handler=:INFO`) and your `odoo.conf`.
-
-To start Odoo, simply run:
+## 🚀 Final Launch
 
 ```bash
+# 1. Start all background services
+sudo pg_ctlcluster 16 main start
+sudo service pgbouncer start
+sudo service redis-server start
+sudo service nginx start
+
+# 2. Switch to the odoo19 user and launch Odoo
+sudo su - odoo19
 cd ~/odoo19
 ./start_odoo.sh
 ```
 
-You can also pass additional Odoo arguments, e.g.:
-
-```bash
-./start_odoo.sh --log-level=debug
+Wait for the terminal to output:
+```
+HTTP service (werkzeug) running on 0.0.0.0:8019
 ```
 
-Once you see `HTTP service (werkzeug) running on 0.0.0.0:8019`, Odoo is ready.
+### Access Odoo
 
-**Note:** The first time you run the script, it may prompt for your password to start PostgreSQL (if it wasn’t running). This is normal.
+| Method | URL |
+|--------|-----|
+| Via Nginx (Recommended) | `http://localhost` |
+| Direct (Bypassing Nginx) | `http://localhost:8019` |
 
----
+### Database Creation Form
 
-## 14. Access Odoo
-
-- Via Nginx (recommended): **`http://localhost`**
-- Directly (bypassing Nginx): **`http://localhost:8019`**
-
-Database creation form:
-- Master Password: `999239`
-- Database Name: any
-- Email: `admin@example.com`
-- Password: `admin`
-
----
-
-## 🔁 WSL2-Specific Notes
-
-- PostgreSQL and Nginx do **not** start automatically after a reboot. The `start_odoo.sh` script starts PostgreSQL for you if it’s not running, but you still need to start Nginx manually:
-  ```bash
-  sudo service nginx start
-  ```
-- To stop Odoo, press `Ctrl+C` in its terminal.
-- Never run Odoo with `sudo`.
+| Field | Value |
+|-------|-------|
+| Master Password | `999239` |
+| Database Name | Any name |
+| Email | `admin@example.com` |
+| Password | `admin` |
 
 ---
 
-## 🧪 Verification
+## 📄 Complete `odoo.conf` Reference
 
-| Check | Command / Action |
-|-------|------------------|
-| PostgreSQL running | `sudo service postgresql status` |
-| Nginx running | `sudo service nginx status` |
-| Odoo accessible directly | `curl -I http://localhost:8019` → 200 |
-| Odoo via Nginx | Open `http://localhost` in browser |
-| wkhtmltopdf works | `wkhtmltopdf --version` |
-| phonenumbers installed | `pip show phonenumbers` |
-| pgvector enabled | `sudo -u postgres psql -d odoo19 -c "SELECT * FROM pg_extension WHERE extname='vector';"` should return a row |
+This is the full configuration file with **all available parameters**. Unused parameters are commented out for reference.
+
+```ini
+[options]
+; =============================================================================
+;                         ODOO 19 MASTER CONFIGURATION
+; =============================================================================
+; Optimized for: User 'odoo19', Ubuntu 24.04, PostgreSQL 16, PgBouncer, Redis
+; =============================================================================
+
+; -----------------------------------------------------------------------------
+; 1. GENERAL & SERVER
+; -----------------------------------------------------------------------------
+http_enable = True
+http_interface = 0.0.0.0
+http_port = 8019
+https = False
+; CRITICAL: Must be True when behind Nginx
+proxy_mode = True
+; pidfile = /var/run/odoo/odoo.pid
+; pg_path = False
+server_wide_modules = base,web
+
+; -----------------------------------------------------------------------------
+; 2. DATABASE CONNECTION (Routing through PgBouncer on port 6432)
+; -----------------------------------------------------------------------------
+db_host = 127.0.0.1
+db_port = 6432
+db_user = odoo19
+db_password = 999239
+db_name = False
+db_maxconn = 64
+db_sslmode = prefer
+dbfilter = ^.*$
+db_template = template0
+unaccent = False
+; log_db = False
+; log_db_level = warning
+
+; -----------------------------------------------------------------------------
+; 3. ADDONS PATHS & FILE STORAGE
+; -----------------------------------------------------------------------------
+addons_path = /home/odoo19/odoo19/odoo/addons,/home/odoo19/odoo19/custom_addons
+data_dir = /home/odoo19/odoo19/filestore
+
+; -----------------------------------------------------------------------------
+; 4. SECURITY & MASTER PASSWORD
+; -----------------------------------------------------------------------------
+admin_passwd = 999239
+; csv_internal_sep = ,
+list_db = True
+
+; -----------------------------------------------------------------------------
+; 5. LOGGING & MONITORING
+; -----------------------------------------------------------------------------
+logfile = /home/odoo19/odoo19/logs/odoo.log
+log_level = info
+log_handler = :INFO
+log_rotate = 30
+; syslog = False
+
+; -----------------------------------------------------------------------------
+; 6. PERFORMANCE & WORKER PROCESSES
+; -----------------------------------------------------------------------------
+; Formula: (CPU cores * 2) + 1. Adjust based on your hardware.
+workers = 4
+max_cron_threads = 2
+limit_memory_soft = 2147483648
+limit_memory_hard = 2684354560
+limit_time_cpu = 60
+limit_time_real = 120
+limit_request = 1073741824
+longpolling_port = 8072
+
+; -----------------------------------------------------------------------------
+; 7. CACHING & SESSIONS (Redis Integration)
+; -----------------------------------------------------------------------------
+session_redis = True
+session_redis_host = 127.0.0.1
+session_redis_port = 6379
+session_redis_db = 1
+session_redis_password = False
+; session_redis_sentinel = False
+; session_redis_sentinel_master = False
+; cache = True
+; cache_size = 10000
+
+; -----------------------------------------------------------------------------
+; 8. EMAIL CONFIGURATION (SMTP)
+; -----------------------------------------------------------------------------
+; smtp_server = localhost
+; smtp_port = 25
+; smtp_ssl = False
+; smtp_user = False
+; smtp_password = False
+; email_from = False
+
+; -----------------------------------------------------------------------------
+; 9. REPORTING (PDF GENERATION)
+; -----------------------------------------------------------------------------
+wkhtmltopdf_path = /usr/bin/wkhtmltopdf
+; reportgz = True
+
+; -----------------------------------------------------------------------------
+; 10. ADVANCED & MULTI-TENANCY
+; -----------------------------------------------------------------------------
+osv_memory_age_limit = 1.0
+; osv_memory_count_limit = False
+; saas = False
+; saas_account = False
+; saas_port = 8069
+
+; -----------------------------------------------------------------------------
+; 11. SECURITY (HTTPS / HSTS)
+; -----------------------------------------------------------------------------
+; hsts = False
+; hsts_max_age = 31536000
+; hsts_include_subdomains = False
+
+; -----------------------------------------------------------------------------
+; 12. DEVELOPER / DEBUG / TESTING OPTIONS
+; -----------------------------------------------------------------------------
+dev_mode = False
+; test_enable = False
+; test_file = False
+; test_tags = False
+demo = False
+; without_demo = False
+translate_modules = ['all']
+; ignore_addons = []
+
+; -----------------------------------------------------------------------------
+; 13. GEOIP
+; -----------------------------------------------------------------------------
+; geoip_database = /usr/share/GeoIP/GeoLite2-City.mmdb
+
+; -----------------------------------------------------------------------------
+; 14. MISCELLANEOUS
+; -----------------------------------------------------------------------------
+; env_file = False
+; timezone = False
+```
+
+---
+
+## 🔧 Service Management
+
+### Start All Services
+
+```bash
+sudo pg_ctlcluster 16 main start
+sudo service pgbouncer start
+sudo service redis-server start
+sudo service nginx start
+
+sudo su - odoo19
+cd ~/odoo19
+./start_odoo.sh
+```
+
+### Stop Odoo
+
+Press `Ctrl+C` in the terminal where Odoo is running.
+
+### Check Service Status
+
+```bash
+sudo pg_lsclusters
+sudo service pgbouncer status
+sudo service redis-server status
+sudo service nginx status
+```
+
+---
+
+## 🔍 Verification Checklist
+
+| Check | Command | Expected Result |
+|-------|---------|-----------------|
+| PostgreSQL running | `sudo pg_lsclusters` | `16 main 5432 online` |
+| PgBouncer running | `sudo service pgbouncer status` | `active (running)` |
+| Redis running | `redis-cli ping` | `PONG` |
+| Nginx running | `sudo service nginx status` | `active (running)` |
+| Odoo accessible | `curl -I http://localhost:8019` | `HTTP/1.1 200 OK` |
+| wkhtmltopdf works | `wkhtmltopdf --version` | `0.12.6.1 (with patched qt)` |
+| pgvector enabled | `sudo -u postgres psql -d template1 -c "SELECT * FROM pg_extension WHERE extname='vector';"` | Returns a row |
+| External DB access | Connect via DBeaver using WSL IP, port 5432 | Successful connection |
+
+### Find Your WSL IP Address
+
+```bash
+hostname -I | awk '{print $1}'
+```
+
+Use this IP with port `5432`, username `odoo19`, and password `999239` in your SQL management tool.
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+| Problem | Solution |
+|---------|----------|
+| `fatal: early EOF` during git clone | Use `--depth 1 --shallow-submodules` flags |
+| `psycopg2` build failure | Install `libpq-dev`: `sudo apt install -y libpq-dev` |
+| `python-ldap` build failure | Install LDAP headers: `sudo apt install -y libldap2-dev libsasl2-dev` |
+| `wkhtmltopdf` not found | Install the patched `.deb` from GitHub releases |
+| `pgbouncer` auth failure | Regenerate MD5 hash in `userlist.txt` |
+| Redis connection refused | Check `sudo service redis-server status` |
+| Odoo won't start | Check logs: `tail -f /home/odoo19/odoo19/logs/odoo.log` |
+| Nginx 502 Bad Gateway | Ensure Odoo is running on port 8019 |
+
+### View Odoo Logs
+
+```bash
+tail -f /home/odoo19/odoo19/logs/odoo.log
+```
+
+### Restart Everything
+
+```bash
+# Stop Odoo (Ctrl+C in terminal)
+sudo pg_ctlcluster 16 main restart
+sudo service pgbouncer restart
+sudo service redis-server restart
+sudo service nginx restart
+
+# Start Odoo again
+sudo su - odoo19
+cd ~/odoo19
+./start_odoo.sh
+```
+
+---
+
+## 📈 Performance Optimizations Summary
+
+| Layer | Optimization | Status |
+|-------|-------------|--------|
+| Odoo | Multi-worker mode (4 workers + 2 cron) | ✅ |
+| Odoo | Memory limits (2GB soft, 2.5GB hard) | ✅ |
+| Odoo | Request timeouts (60s CPU, 120s real) | ✅ |
+| Database | Connection pooling via PgBouncer | ✅ |
+| Database | Optimized memory settings (4GB shared_buffers) | ✅ |
+| Database | pgvector for AI/RAG | ✅ |
+| Cache | Redis for session storage | ✅ |
+| Proxy | Nginx with gzip compression | ✅ |
+| Proxy | Static asset caching (2 days) | ✅ |
+| Proxy | WebSocket routing for live chat | ✅ |
+| Reports | Patched wkhtmltopdf for PDF generation | ✅ |
+
+---
+
+## 🤖 AI/RAG Features (Odoo 19)
+
+This installation includes the `pgvector` extension, enabling:
+
+- **Vector Search**: Semantic search across documents
+- **RAG (Retrieval-Augmented Generation)**: AI-powered document Q&A
+- **Knowledge Base**: Intelligent document indexing
+
+### Enable AI in Odoo
+
+1. Navigate to **Settings → General Settings**
+2. Find the **AI Configuration** section
+3. Configure your LLM provider (OpenAI, Azure, Ollama, etc.)
+4. Install the **Knowledge** module from Apps
+5. Upload documents to begin AI indexing
+
+---
+
+## 🔄 WSL2-Specific Notes
+
+- Services do **not** start automatically after a WSL2 reboot
+- Use the "Start All Services" commands after each reboot
+- To stop Odoo, press `Ctrl+C` in its terminal
+- Never run Odoo with `sudo`
+- If using Docker, replace `service` commands with `supervisord` or container orchestration
+
+---
+
+## 📝 License
+
+This project is proprietary software. All rights reserved.
+
+---
+
+## 👨‍💻 Author
+
+**Ehsan REZAEI**
+- GitHub: [@ehsan-r97](https://github.com/ehsan-r97)
+- Repository: [odoo19](https://github.com/ehsan-r97/odoo19)
+
+---
+
+## 📚 Additional Resources
+
+- [Odoo Documentation](https://www.odoo.com/documentation)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [PgBouncer Documentation](https://www.pgbouncer.org/)
+- [Redis Documentation](https://redis.io/docs/)
+- [Nginx Documentation](https://nginx.org/en/docs/)
+- [pgvector GitHub](https://github.com/pgvector/pgvector)
