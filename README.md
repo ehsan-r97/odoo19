@@ -1,7 +1,3 @@
-Here is the complete, comprehensive `README.md` file for your Odoo 19 repository. This document covers every aspect of your architecture, installation, configuration, and maintenance.
-
----
-
 # 📘 Odoo 19 Full-Stack Installation Guide
 
 ## 🏗️ Architecture Overview
