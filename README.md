@@ -472,4 +472,19 @@ translate_modules = ['all']
 | Nginx Proxy | `curl -I http://127.0.0.1` | `HTTP/1.1 303 SEE OTHER` |
 | Odoo Ports | `sudo ss -ltnp \| grep -E ':(80\|6432\|8019\|8072)\b'` | Shows Nginx, PgBouncer, and Python processes |
 ```
+sudo -u odoo19 bash -lc '
+cd ~/odoo19
+source venv/bin/activate
 
+echo "🔍 Searching for nested requirements.txt files..."
+
+# Find all requirements.txt files inside custom_addons
+find custom_addons -type f -name "requirements.txt" | while read -r req_file; do
+    echo "---------------------------------------------------"
+    echo "📦 Installing dependencies from: $req_file"
+    echo "---------------------------------------------------"
+    pip install -r "$req_file"
+done
+
+echo "✅ All nested requirements processed."
+'
