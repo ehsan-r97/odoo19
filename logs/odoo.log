@@ -1,36 +1,1062 @@
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: unknown option 'https' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: unknown option 'log_rotate' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: unknown option 'longpolling_port' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: option smtp_user reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: option smtp_password reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: option email_from reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: unknown option 'wkhtmltopdf_path' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: unknown option 'osv_memory_age_limit' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
-2026-04-19 13:25:19,552 9252 WARNING ? odoo.tools.config: unknown option 'translate_modules' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
-2026-04-19 13:25:19,552 9252 INFO ? odoo: Odoo version 19.0+e-20260409 
-2026-04-19 13:25:19,553 9252 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
-2026-04-19 13:25:19,553 9252 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons']) 
-2026-04-19 13:25:19,553 9252 INFO ? odoo: database: odoo19@localhost:5432 
-2026-04-19 13:25:21,876 9252 INFO ? odoo.service.server: HTTP service (werkzeug) running on EhsanDEV.localdomain:8069 
-2026-04-19 13:25:21,971 9252 INFO odoo19 odoo.modules.loading: loading 1 modules... 
-2026-04-19 13:25:21,973 9252 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
-2026-04-19 13:25:22,139 9252 INFO odoo19 odoo.modules.loading: loading 21 modules... 
-2026-04-19 13:25:23,106 9252 INFO odoo19 odoo.modules.loading: 21 modules loaded in 0.97s, 0 queries (+0 extra) 
-2026-04-19 13:25:23,131 9252 INFO odoo19 odoo.modules.loading: Modules loaded. 
-2026-04-19 13:25:23,149 9252 INFO odoo19 odoo.registry: Registry loaded in 1.272s 
-2026-04-19 13:26:23,247 9252 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
-2026-04-19 13:26:23,800 9252 INFO odoo19 odoo.addons.base.models.ir_attachment: filestore gc 2 checked, 0 removed 
-2026-04-19 13:26:23,831 9252 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 1 entries 
-2026-04-19 13:26:24,324 9252 INFO odoo19 odoo.addons.base.models.res_users: GC'd 0 user log entries 
-2026-04-19 13:26:24,415 9252 INFO odoo19 odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
-2026-04-19 13:26:24,567 9252 INFO odoo19 odoo.models.unlink: User #1 deleted base.language.install records with IDs: [1] 
-2026-04-19 13:26:24,793 9252 INFO odoo19 odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
-2026-04-19 13:26:24,888 9252 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
-2026-04-19 13:26:24,985 9252 INFO odoo19 odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
-2026-04-19 13:26:25,185 9252 INFO odoo19 odoo.models.unlink: User #1 deleted res.config.settings records with IDs: [1, 2, 3, 4] 
-2026-04-19 13:26:25,263 9252 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 44; remaining 0; duration 2.02s) 
-2026-04-19 13:26:28,194 9252 INFO odoo19 odoo.service.server: Initiating shutdown 
-2026-04-19 13:26:28,194 9252 INFO odoo19 odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
-2026-04-19 13:26:28,464 9252 INFO odoo19 odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 5 connections  
-2026-04-19 13:26:28,465 9252 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-09-16 20:55:39,058 15178 WARNING ? odoo.tools.config: option addons_path, invalid addons directory '/home/odoo19/odoo19/custom_addons', skipped 
+2026-09-16 20:55:39,058 15178 WARNING ? odoo.tools.config: unknown option 'session_redis' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,058 15178 WARNING ? odoo.tools.config: unknown option 'session_redis_host' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,058 15178 WARNING ? odoo.tools.config: unknown option 'session_redis_port' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,058 15178 WARNING ? odoo.tools.config: unknown option 'session_redis_db' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,058 15178 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 20:55:39,058 15178 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 20:55:39,058 15178 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0']) 
+2026-09-16 20:55:39,058 15178 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 20:55:39,212 15178 INFO ? odoo.service.server: HTTP service (werkzeug) running on 127.0.0.1:8019 
+2026-09-16 20:55:39,214 15183 INFO ? odoo.service.server: Worker WorkerHTTP (15183) alive 
+2026-09-16 20:55:39,215 15184 INFO ? odoo.service.server: Worker WorkerHTTP (15184) alive 
+2026-09-16 20:55:39,216 15185 INFO ? odoo.service.server: Worker WorkerHTTP (15185) alive 
+2026-09-16 20:55:39,217 15187 INFO ? odoo.service.server: Worker WorkerHTTP (15187) alive 
+2026-09-16 20:55:39,219 15191 INFO ? odoo.service.server: Worker WorkerCron (15191) alive 
+2026-09-16 20:55:39,220 15193 INFO ? odoo.service.server: Worker WorkerCron (15193) alive 
+2026-09-16 20:55:39,452 15188 WARNING ? odoo.tools.config: option addons_path, invalid addons directory '/home/odoo19/odoo19/custom_addons', skipped 
+2026-09-16 20:55:39,452 15188 WARNING ? odoo.tools.config: unknown option 'session_redis' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,452 15188 WARNING ? odoo.tools.config: unknown option 'session_redis_host' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,452 15188 WARNING ? odoo.tools.config: unknown option 'session_redis_port' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,452 15188 WARNING ? odoo.tools.config: unknown option 'session_redis_db' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 20:55:39,453 15188 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 20:55:39,453 15188 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 20:55:39,453 15188 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0']) 
+2026-09-16 20:55:39,453 15188 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 20:55:39,632 15188 INFO ? odoo.service.server: Evented Service (longpolling) running on 127.0.0.1:8072 
+2026-09-16 20:55:44,724 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:55:44] "GET /web/database/selector HTTP/1.1" 200 - 2 0.006 0.039
+2026-09-16 20:55:46,684 15187 ERROR ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:55:46] Request timed out: TimeoutError('timed out') - - -
+2026-09-16 20:55:48,735 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:55:48] "GET / HTTP/1.1" 303 - 1 0.001 0.008
+2026-09-16 20:55:48,765 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:55:48] "GET /odoo HTTP/1.1" 303 - 2 0.001 0.023
+2026-09-16 20:55:48,791 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:55:48] "GET /web/database/selector HTTP/1.1" 200 - 2 0.001 0.024
+2026-09-16 20:56:48,796 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:56:48] "HEAD / HTTP/1.1" 303 - 1 0.002 0.012
+2026-09-16 20:58:10,105 15183 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /?spm=a2ty_o01.29997173.0.0.6f5055fbL8QbO1 HTTP/1.1" 303 - 1 0.000 0.016
+2026-09-16 20:58:10,114 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /odoo?spm=a2ty_o01.29997173.0.0.6f5055fbL8QbO1 HTTP/1.1" 303 - 2 0.001 0.006
+2026-09-16 20:58:10,142 15183 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/database/selector HTTP/1.1" 200 - 2 0.001 0.026
+2026-09-16 20:58:10,163 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/util/index.js HTTP/1.0" 200 - 1 0.001 0.005
+2026-09-16 20:58:10,164 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/dom/data.js HTTP/1.0" 200 - 1 0.001 0.005
+2026-09-16 20:58:10,165 15183 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/dist/css/bootstrap.css HTTP/1.0" 200 - 1 0.001 0.007
+2026-09-16 20:58:10,168 15187 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/src/libs/fontawesome/css/font-awesome.css HTTP/1.0" 200 - 1 0.001 0.009
+2026-09-16 20:58:10,170 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/dom/event-handler.js HTTP/1.0" 200 - 1 0.001 0.005
+2026-09-16 20:58:10,172 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/dom/manipulator.js HTTP/1.0" 200 - 1 0.001 0.006
+2026-09-16 20:58:10,173 15183 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/dom/selector-engine.js HTTP/1.0" 200 - 1 0.000 0.005
+2026-09-16 20:58:10,175 15187 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/util/config.js HTTP/1.0" 200 - 1 0.002 0.004
+2026-09-16 20:58:10,175 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/util/component-functions.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,178 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/util/backdrop.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,178 15183 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/util/focustrap.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,180 15187 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/util/scrollbar.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,181 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/base-component.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,183 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/lib/bootstrap/js/dist/modal.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,184 15183 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/src/public/database_manager.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,188 15183 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/img/logo2.png HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,206 15185 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 20:58:10,257 15187 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 20:58:10] "GET /web/static/img/favicon.ico HTTP/1.0" 200 - 1 0.001 0.004
+2026-09-16 21:07:44,334 15185 INFO None odoo.service.db: Create database `odoo19`. 
+2026-09-16 21:07:44,447 15185 INFO None odoo.modules.loading: Initializing database odoo19 
+2026-09-16 21:07:46,019 15185 INFO None odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:07:46,019 15185 INFO None odoo.modules.loading: Loading module base (1/1) 
+2026-09-16 21:07:46,037 15185 INFO None odoo.registry: module base: creating or updating database tables 
+2026-09-16 21:07:46,360 15185 INFO None odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-09-16 21:07:46,361 15185 INFO None odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-09-16 21:07:46,361 15185 INFO None odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-09-16 21:07:46,453 15185 INFO None odoo.models: Prepare computation of res.partner.user_id 
+2026-09-16 21:07:46,454 15185 INFO None odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-09-16 21:07:46,454 15185 INFO None odoo.models: Prepare computation of res.partner.complete_name 
+2026-09-16 21:07:46,454 15185 INFO None odoo.models: Prepare computation of res.partner.lang 
+2026-09-16 21:07:46,454 15185 INFO None odoo.models: Prepare computation of res.partner.company_registry 
+2026-09-16 21:07:46,454 15185 INFO None odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-09-16 21:07:46,454 15185 INFO None odoo.models: Prepare computation of res.partner.properties 
+2026-09-16 21:07:46,454 15185 INFO None odoo.models: Prepare computation of res.partner.partner_share 
+2026-09-16 21:07:46,480 15185 INFO None odoo.models: Prepare computation of res.currency.decimal_places 
+2026-09-16 21:07:46,500 15185 INFO None odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-09-16 21:07:46,500 15185 INFO None odoo.models: Prepare computation of res.company.logo_web 
+2026-09-16 21:07:46,502 15185 INFO None odoo.models: Computing parent_path for table res_company... 
+2026-09-16 21:07:46,529 15185 INFO None odoo.models: Prepare computation of res.users.signature 
+2026-09-16 21:07:46,529 15185 INFO None odoo.models: Prepare computation of res.users.share 
+2026-09-16 21:07:47,575 15185 INFO None odoo.modules.loading: loading base/data/res_bank.xml 
+2026-09-16 21:07:47,580 15185 INFO None odoo.modules.loading: loading base/data/res.lang.csv 
+2026-09-16 21:07:47,604 15185 INFO None odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-09-16 21:07:47,627 15185 INFO None odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-09-16 21:07:47,656 15185 INFO None odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-09-16 21:07:47,945 15185 INFO None odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-09-16 21:07:47,953 15185 INFO None odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-09-16 21:07:48,493 15185 INFO None odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-09-16 21:07:48,501 15185 INFO None odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-09-16 21:07:48,846 15185 INFO None odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-09-16 21:07:48,854 15185 INFO None odoo.modules.loading: loading base/security/base_groups.xml 
+2026-09-16 21:07:48,953 15185 INFO None odoo.modules.loading: loading base/security/base_security.xml 
+2026-09-16 21:07:49,032 15185 INFO None odoo.modules.loading: loading base/wizard/wizard_ir_model_menu_create_views.xml 
+2026-09-16 21:07:49,038 15185 INFO None odoo.modules.loading: loading base/views/base_menus.xml 
+2026-09-16 21:07:49,066 15185 INFO None odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-09-16 21:07:49,076 15185 INFO None odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-09-16 21:07:49,079 15185 INFO None odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-09-16 21:07:49,248 15185 INFO None odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-09-16 21:07:49,331 15185 INFO None odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-09-16 21:07:49,342 15185 INFO None odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-09-16 21:07:49,351 15185 INFO None odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-09-16 21:07:49,369 15185 INFO None odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-09-16 21:07:49,378 15185 INFO None odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-09-16 21:07:49,393 15185 INFO None odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-09-16 21:07:49,406 15185 INFO None odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-09-16 21:07:49,488 15185 INFO None odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-09-16 21:07:49,501 15185 INFO None odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-09-16 21:07:49,513 15185 INFO None odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-09-16 21:07:49,528 15185 INFO None odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-09-16 21:07:49,541 15185 INFO None odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-09-16 21:07:49,571 15185 INFO None odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-09-16 21:07:49,583 15185 INFO None odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2026-09-16 21:07:49,584 15185 INFO None odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-09-16 21:07:49,592 15185 INFO None odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-09-16 21:07:49,594 15185 INFO None odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-09-16 21:07:49,600 15185 INFO None odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-09-16 21:07:49,612 15185 INFO None odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-09-16 21:07:49,620 15185 INFO None odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-09-16 21:07:49,650 15185 INFO None odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-09-16 21:07:49,670 15185 INFO None odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-09-16 21:07:49,686 15185 INFO None odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-09-16 21:07:49,688 15185 INFO None odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-09-16 21:07:49,692 15185 INFO None odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-09-16 21:07:49,700 15185 INFO None odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-09-16 21:07:49,708 15185 INFO None odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-09-16 21:07:49,715 15185 INFO None odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-09-16 21:07:49,726 15185 INFO None odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-09-16 21:07:49,732 15185 INFO None odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-09-16 21:07:49,740 15185 INFO None odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-09-16 21:07:49,751 15185 INFO None odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-09-16 21:07:49,760 15185 INFO None odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-09-16 21:07:49,772 15185 INFO None odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-09-16 21:07:49,785 15185 INFO None odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-09-16 21:07:49,795 15185 INFO None odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-09-16 21:07:49,845 15185 INFO None odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-09-16 21:07:49,863 15185 INFO None odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-09-16 21:07:49,887 15185 INFO None odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-09-16 21:07:49,909 15185 INFO None odoo.modules.loading: loading base/views/res_groups_views.xml 
+2026-09-16 21:07:49,935 15185 INFO None odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-09-16 21:07:49,991 15185 INFO None odoo.modules.loading: loading base/views/res_users_apikeys_views.xml 
+2026-09-16 21:07:49,994 15185 INFO None odoo.modules.loading: loading base/views/res_device_views.xml 
+2026-09-16 21:07:50,007 15185 INFO None odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-09-16 21:07:50,011 15185 INFO None odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-09-16 21:07:50,016 15185 INFO None odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-09-16 21:07:50,029 15185 INFO None odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-09-16 21:07:50,095 15185 INFO None odoo.modules.loading: Module base loaded in 4.08s, 8374 queries (+8374 other) 
+2026-09-16 21:07:50,095 15185 INFO None odoo.modules.loading: 1 modules loaded in 4.08s, 8374 queries (+8374 extra) 
+2026-09-16 21:07:50,097 15185 INFO None odoo.modules.loading: updating modules list 
+2026-09-16 21:07:50,098 15185 INFO None odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-09-16 21:07:51,111 15185 INFO None odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:07:51,111 15185 INFO None odoo.modules.loading: Loading module rpc (2/20) 
+2026-09-16 21:07:51,123 15185 INFO None odoo.modules.loading: Module rpc loaded in 0.01s, 9 queries (+9 other) 
+2026-09-16 21:07:51,123 15185 INFO None odoo.modules.loading: Loading module web (3/20) 
+2026-09-16 21:07:51,142 15185 INFO None odoo.registry: module web: creating or updating database tables 
+2026-09-16 21:07:51,393 15185 INFO None odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-09-16 21:07:51,398 15185 INFO None odoo.modules.loading: loading web/security/web_security.xml 
+2026-09-16 21:07:51,404 15185 INFO None odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-09-16 21:07:51,436 15185 INFO None odoo.modules.loading: loading web/views/report_templates.xml 
+2026-09-16 21:07:51,489 15185 INFO None odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-09-16 21:07:51,498 15185 INFO None odoo.modules.loading: loading web/views/partner_view.xml 
+2026-09-16 21:07:51,502 15185 INFO None odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-09-16 21:07:51,505 15185 INFO None odoo.modules.loading: loading web/views/memory_template.xml 
+2026-09-16 21:07:51,509 15185 INFO None odoo.modules.loading: loading web/views/speedscope_config_wizard.xml 
+2026-09-16 21:07:51,513 15185 INFO None odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-09-16 21:07:51,517 15185 INFO None odoo.modules.loading: loading web/views/ir_ui_view_views.xml 
+2026-09-16 21:07:51,523 15185 INFO None odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-09-16 21:07:51,526 15185 INFO None odoo.modules.loading: loading web/data/report_layout.xml 
+2026-09-16 21:07:51,551 15185 INFO None odoo.modules.loading: Module web loaded in 0.43s, 1232 queries (+1232 other) 
+2026-09-16 21:07:51,552 15185 INFO None odoo.modules.loading: Loading module api_doc (4/20) 
+2026-09-16 21:07:51,559 15185 INFO None odoo.registry: module api_doc: creating or updating database tables 
+2026-09-16 21:07:51,570 15185 INFO None odoo.modules.loading: loading api_doc/security/res_groups.xml 
+2026-09-16 21:07:51,583 15185 INFO None odoo.modules.loading: loading api_doc/views/docclient.xml 
+2026-09-16 21:07:51,595 15185 INFO None odoo.modules.loading: Module api_doc loaded in 0.04s, 63 queries (+63 other) 
+2026-09-16 21:07:51,595 15185 INFO None odoo.modules.loading: Loading module auth_totp (5/20) 
+2026-09-16 21:07:51,612 15185 INFO None odoo.registry: module auth_totp: creating or updating database tables 
+2026-09-16 21:07:51,662 15185 INFO None odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-09-16 21:07:51,675 15185 INFO None odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-09-16 21:07:51,679 15185 INFO None odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-09-16 21:07:51,683 15185 INFO None odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-09-16 21:07:51,703 15185 INFO None odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-09-16 21:07:51,709 15185 INFO None odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-09-16 21:07:51,722 15185 INFO None odoo.modules.loading: Module auth_totp loaded in 0.13s, 218 queries (+218 other) 
+2026-09-16 21:07:51,722 15185 INFO None odoo.modules.loading: Loading module base_import (6/20) 
+2026-09-16 21:07:51,751 15185 INFO None odoo.registry: module base_import: creating or updating database tables 
+2026-09-16 21:07:51,991 15185 INFO None odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-09-16 21:07:52,000 15185 INFO None odoo.modules.loading: Module base_import loaded in 0.28s, 956 queries (+956 other) 
+2026-09-16 21:07:52,000 15185 INFO None odoo.modules.loading: Loading module base_import_module (7/20) 
+2026-09-16 21:07:52,012 15185 INFO None odoo.registry: module base_import_module: creating or updating database tables 
+2026-09-16 21:07:52,055 15185 INFO None odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-09-16 21:07:52,058 15185 INFO None odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-09-16 21:07:52,069 15185 INFO None odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-09-16 21:07:52,093 15185 INFO None odoo.modules.loading: Module base_import_module loaded in 0.09s, 172 queries (+172 other) 
+2026-09-16 21:07:52,093 15185 INFO None odoo.modules.loading: Loading module base_setup (8/20) 
+2026-09-16 21:07:52,103 15185 INFO None odoo.registry: module base_setup: creating or updating database tables 
+2026-09-16 21:07:52,127 15185 INFO None odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-09-16 21:07:52,129 15185 INFO None odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-09-16 21:07:52,148 15185 INFO None odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-09-16 21:07:52,161 15185 INFO None odoo.modules.loading: Module base_setup loaded in 0.07s, 152 queries (+152 other) 
+2026-09-16 21:07:52,161 15185 INFO None odoo.modules.loading: Loading module bus (9/20) 
+2026-09-16 21:07:52,185 15185 INFO None odoo.registry: module bus: creating or updating database tables 
+2026-09-16 21:07:52,238 15185 INFO None odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-09-16 21:07:52,246 15185 INFO None odoo.modules.loading: Module bus loaded in 0.09s, 155 queries (+155 other) 
+2026-09-16 21:07:52,247 15185 INFO None odoo.modules.loading: Loading module web_cohort (10/20) 
+2026-09-16 21:07:52,272 15185 INFO None odoo.registry: module web_cohort: creating or updating database tables 
+2026-09-16 21:07:52,459 15191 WARNING odoo19 odoo.addons.base.models.ir_cron: Skipping database odoo19 because of modules to install/upgrade/remove. 
+2026-09-16 21:07:52,512 15185 INFO None odoo.modules.loading: Module web_cohort loaded in 0.27s, 942 queries (+942 other) 
+2026-09-16 21:07:52,512 15185 INFO None odoo.modules.loading: Loading module web_gantt (11/20) 
+2026-09-16 21:07:52,537 15185 INFO None odoo.registry: module web_gantt: creating or updating database tables 
+2026-09-16 21:07:52,781 15185 INFO None odoo.modules.loading: Module web_gantt loaded in 0.27s, 938 queries (+938 other) 
+2026-09-16 21:07:52,781 15185 INFO None odoo.modules.loading: Loading module web_grid (12/20) 
+2026-09-16 21:07:52,804 15185 INFO None odoo.registry: module web_grid: creating or updating database tables 
+2026-09-16 21:07:53,067 15185 INFO None odoo.modules.loading: Module web_grid loaded in 0.29s, 938 queries (+938 other) 
+2026-09-16 21:07:53,067 15185 INFO None odoo.modules.loading: Loading module web_tour (13/20) 
+2026-09-16 21:07:53,074 15185 INFO None odoo.registry: module web_tour: creating or updating database tables 
+2026-09-16 21:07:53,077 15185 INFO None odoo.models: Prepare computation of res.users.tour_enabled 
+2026-09-16 21:07:53,131 15185 INFO None odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-09-16 21:07:53,135 15185 INFO None odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-09-16 21:07:53,163 15185 INFO None odoo.modules.loading: Module web_tour loaded in 0.10s, 180 queries (+180 other) 
+2026-09-16 21:07:53,163 15185 INFO None odoo.modules.loading: Loading module auth_passkey (14/20) 
+2026-09-16 21:07:53,219 15185 INFO None odoo.registry: module auth_passkey: creating or updating database tables 
+2026-09-16 21:07:53,263 15185 INFO None odoo.modules.loading: loading auth_passkey/views/auth_passkey_key_views.xml 
+2026-09-16 21:07:53,276 15185 INFO None odoo.modules.loading: loading auth_passkey/views/auth_passkey_login_templates.xml 
+2026-09-16 21:07:53,283 15185 INFO None odoo.modules.loading: loading auth_passkey/views/res_users_identitycheck_views.xml 
+2026-09-16 21:07:53,289 15185 INFO None odoo.modules.loading: loading auth_passkey/views/res_users_views.xml 
+2026-09-16 21:07:53,301 15185 INFO None odoo.modules.loading: loading auth_passkey/security/ir.model.access.csv 
+2026-09-16 21:07:53,305 15185 INFO None odoo.modules.loading: loading auth_passkey/security/security.xml 
+2026-09-16 21:07:53,320 15185 INFO None odoo.modules.loading: Module auth_passkey loaded in 0.16s, 218 queries (+218 other) 
+2026-09-16 21:07:53,320 15185 INFO None odoo.modules.loading: Loading module html_editor (15/20) 
+2026-09-16 21:07:53,585 15185 INFO None odoo.registry: module html_editor: creating or updating database tables 
+2026-09-16 21:07:53,856 15185 INFO None odoo.modules.loading: loading html_editor/security/ir.model.access.csv 
+2026-09-16 21:07:53,866 15185 INFO None odoo.modules.loading: Module html_editor loaded in 0.55s, 1030 queries (+1030 other) 
+2026-09-16 21:07:53,866 15185 INFO None odoo.modules.loading: Loading module iap (16/20) 
+2026-09-16 21:07:53,868 15185 INFO None odoo.registry: module iap: creating or updating database tables 
+2026-09-16 21:07:53,922 15185 INFO None odoo.modules.loading: loading iap/data/services.xml 
+2026-09-16 21:07:53,925 15185 INFO None odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-09-16 21:07:53,929 15185 INFO None odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-09-16 21:07:53,933 15185 INFO None odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-09-16 21:07:53,947 15185 INFO None odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-09-16 21:07:53,960 15185 INFO None odoo.modules.loading: Module iap loaded in 0.09s, 182 queries (+182 other) 
+2026-09-16 21:07:53,960 15185 INFO None odoo.modules.loading: Loading module web_enterprise (17/20) 
+2026-09-16 21:07:53,968 15185 INFO None odoo.registry: module web_enterprise: creating or updating database tables 
+2026-09-16 21:07:53,990 15185 INFO None odoo.modules.loading: loading web_enterprise/views/webclient_templates.xml 
+2026-09-16 21:07:53,998 15185 INFO None odoo.modules.loading: loading web_enterprise/views/res_users_views.xml 
+2026-09-16 21:07:54,017 15185 INFO None odoo.modules.loading: Module web_enterprise loaded in 0.06s, 113 queries (+113 other) 
+2026-09-16 21:07:54,017 15185 INFO None odoo.modules.loading: Loading module web_map (18/20) 
+2026-09-16 21:07:54,045 15185 INFO None odoo.registry: module web_map: creating or updating database tables 
+2026-09-16 21:07:54,053 15185 INFO None odoo.models: Prepare computation of res.partner.contact_address_complete 
+2026-09-16 21:07:54,300 15185 INFO None odoo.modules.loading: loading web_map/views/res_config_settings.xml 
+2026-09-16 21:07:54,311 15185 INFO None odoo.modules.loading: loading web_map/views/res_partner_views.xml 
+2026-09-16 21:07:54,326 15185 INFO None odoo.modules.loading: Module web_map loaded in 0.31s, 1059 queries (+1059 other) 
+2026-09-16 21:07:54,326 15185 INFO None odoo.modules.loading: Loading module web_mobile (19/20) 
+2026-09-16 21:07:54,332 15185 INFO None odoo.registry: module web_mobile: creating or updating database tables 
+2026-09-16 21:07:54,358 15185 INFO None odoo.modules.loading: loading web_mobile/views/views.xml 
+2026-09-16 21:07:54,372 15185 INFO None odoo.modules.loading: Module web_mobile loaded in 0.05s, 83 queries (+83 other) 
+2026-09-16 21:07:54,372 15185 INFO None odoo.modules.loading: Loading module web_unsplash (20/20) 
+2026-09-16 21:07:54,380 15185 INFO None odoo.registry: module web_unsplash: creating or updating database tables 
+2026-09-16 21:07:54,398 15185 INFO None odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-09-16 21:07:54,415 15185 INFO None odoo.modules.loading: Module web_unsplash loaded in 0.04s, 93 queries (+93 other) 
+2026-09-16 21:07:54,415 15185 INFO None odoo.modules.loading: 20 modules loaded in 3.30s, 8733 queries (+8733 extra) 
+2026-09-16 21:07:54,568 15185 INFO None odoo.modules.loading: Modules loaded. 
+2026-09-16 21:07:54,575 15185 INFO None odoo.registry: Registry changed, signaling through the database 
+2026-09-16 21:07:54,577 15185 INFO None odoo.registry: Registry loaded in 10.156s 
+2026-09-16 21:07:55,138 15185 INFO None odoo.addons.base.models.res_users: Login successful for login:admin from 127.0.0.1 
+2026-09-16 21:07:55,149 15185 INFO None werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:55] "POST /web/database/create HTTP/1.1" 303 - 30739 5.701 5.382
+2026-09-16 21:07:55,152 15185 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:07:55,158 15185 INFO odoo19 odoo.addons.base.models.res_device: User 2 inserts device log (3HP0pUmy27nK3ojDd266nhivXeHfUlfxfF_RSRElt8) 
+2026-09-16 21:07:55,274 15185 INFO odoo19 odoo.registry: Caches invalidated, signaling through the database: ['default', 'groups', 'stable'] 
+2026-09-16 21:07:55,281 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:55] "GET /odoo HTTP/1.1" 200 - 64 0.015 0.116
+2026-09-16 21:07:55,311 15187 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:07:55,314 15184 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:07:55,314 15187 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:07:55,318 15184 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:07:55,318 15187 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:07:55,323 15184 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:07:55,326 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:55] "GET /web/webclient/load_menus HTTP/1.1" 200 - 12 0.003 0.005
+2026-09-16 21:07:55,342 15183 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:07:55,345 15183 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:07:55,348 15183 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:07:55,417 15187 INFO ? odoo.modules.loading: 20 modules loaded in 0.10s, 0 queries (+0 extra) 
+2026-09-16 21:07:55,418 15184 INFO ? odoo.modules.loading: 20 modules loaded in 0.10s, 0 queries (+0 extra) 
+2026-09-16 21:07:55,440 15183 INFO ? odoo.modules.loading: 20 modules loaded in 0.09s, 0 queries (+0 extra) 
+2026-09-16 21:07:55,440 15187 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:07:55,441 15184 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:07:55,448 15187 INFO ? odoo.registry: Registry loaded in 0.156s 
+2026-09-16 21:07:55,449 15187 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:07:55,450 15184 INFO ? odoo.registry: Registry loaded in 0.158s 
+2026-09-16 21:07:55,451 15184 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:07:55,465 15183 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:07:55,473 15183 INFO ? odoo.registry: Registry loaded in 0.144s 
+2026-09-16 21:07:55,474 15183 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:07:55,490 15183 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:55] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 40 0.017 0.144
+2026-09-16 21:07:56,246 15184 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/4f29161/web.assets_web.min.css (id:14) 
+2026-09-16 21:07:56,253 15184 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /web/assets/4f29161/web.assets_web.min.css HTTP/1.0" 200 - 48 0.037 0.925
+2026-09-16 21:07:56,288 15187 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/d87b2f2/web.assets_web.min.js (id:15) 
+2026-09-16 21:07:56,295 15187 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /web/assets/d87b2f2/web.assets_web.min.js HTTP/1.0" 200 - 48 0.019 0.985
+2026-09-16 21:07:56,496 15187 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /web/webclient/translations?hash=&lang=en_US HTTP/1.1" 200 - 2 0.001 0.002
+2026-09-16 21:07:56,518 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /odoo HTTP/1.1" 200 - 24 0.004 0.041
+2026-09-16 21:07:56,534 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /web/webclient/load_menus HTTP/1.1" 200 - 1 0.000 0.001
+2026-09-16 21:07:56,585 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 6 0.002 0.003
+2026-09-16 21:07:56,590 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /web/webclient/translations?hash=4346bc85ae7edb70ece0ef3d968a960db042d5b5&lang=en_US HTTP/1.1" 200 - 2 0.001 0.003
+2026-09-16 21:07:56,606 15185 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/78137de/bus.websocket_worker_assets.min.js (id:16) 
+2026-09-16 21:07:56,608 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 200 - 11 0.002 0.015
+2026-09-16 21:07:56,611 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /web/service-worker.js HTTP/1.0" 200 - 1 0.000 0.001
+2026-09-16 21:07:56,624 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /odoo HTTP/1.1" 200 - 10 0.002 0.005
+2026-09-16 21:07:56,633 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /odoo/offline HTTP/1.1" 200 - 6 0.002 0.006
+2026-09-16 21:07:56,637 15185 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:07:56,639 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:56] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.000 0.003
+2026-09-16 21:07:57,088 15184 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/0ab506b/web.assets_web_print.min.css (id:17) 
+2026-09-16 21:07:57,094 15184 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web/assets/0ab506b/web.assets_web_print.min.css HTTP/1.0" 200 - 20 0.021 0.813
+2026-09-16 21:07:57,320 15187 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/b60c4e3/web.assets_web_dark.min.css (id:18) 
+2026-09-16 21:07:57,325 15187 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web/assets/b60c4e3/web.assets_web_dark.min.css HTTP/1.0" 200 - 22 0.018 0.779
+2026-09-16 21:07:57,362 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web/image/res.partner/3/avatar_128?unique=1789580274000 HTTP/1.1" 200 - 14 0.003 0.018
+2026-09-16 21:07:57,363 15187 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 23 0.006 0.015
+2026-09-16 21:07:57,363 15184 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:07:57,371 15183 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/0ab506b/web.assets_web_print.min.css (id:19) 
+2026-09-16 21:07:57,373 15183 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web/assets/0ab506b/web.assets_web_print.min.css HTTP/1.0" 200 - 23 0.020 0.820
+2026-09-16 21:07:57,379 15187 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web_enterprise/static/img/background-dark.jpg HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:07:57,412 15187 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:57] "GET /web/static/img/odoo-icon-192x192.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:07:58,540 15187 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:07:58,546 15187 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:58] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.002 0.011
+2026-09-16 21:07:59,544 15183 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:07:59,550 15183 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:07:59] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.002 0.011
+2026-09-16 21:08:03,710 15185 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:08:03,713 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:08:03] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.002 0.008
+2026-09-16 21:08:07,678 15187 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:08:07,681 15187 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:08:07] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.001 0.008
+2026-09-16 21:08:16,584 15193 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:08:16,588 15193 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:08:16,591 15193 INFO odoo19 odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:08:16,687 15193 INFO odoo19 odoo.modules.loading: 20 modules loaded in 0.10s, 0 queries (+0 extra) 
+2026-09-16 21:08:16,711 15193 INFO odoo19 odoo.modules.loading: Modules loaded. 
+2026-09-16 21:08:16,719 15193 INFO odoo19 odoo.registry: Registry loaded in 0.152s 
+2026-09-16 21:08:16,720 15193 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-09-16 21:08:16,779 15193 INFO odoo19 odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-09-16 21:08:16,791 15193 INFO odoo19 odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-09-16 21:08:16,802 15193 INFO odoo19 odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-09-16 21:08:16,816 15193 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-16 21:08:16,818 15193 INFO odoo19 odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-09-16 21:08:16,857 15185 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:08:16,857 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:08:16] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.000 0.002
+2026-09-16 21:08:16,858 15193 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-16 21:08:16,863 15193 INFO odoo19 odoo.addons.base.models.ir_attachment: filestore gc 4 checked, 0 removed 
+2026-09-16 21:08:16,870 15193 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.15s) 
+2026-09-16 21:08:16,874 15193 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) starting 
+2026-09-16 21:08:16,884 15193 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-09-16 21:08:27,659 15183 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:08:27,662 15183 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:08:27] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.002 0.008
+2026-09-16 21:08:47,117 15185 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:08:47,120 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:08:47] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.002 0.014
+2026-09-16 21:09:13,982 15185 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1014, in open_connection
+    socket = request.httprequest._HTTPRequest__environ['socket']
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'socket'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2506, in dispatch
+    return self.request.registry['ir.http']._dispatch(endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/controllers/websocket.py", line 20, in websocket
+    return WebsocketConnectionHandler.open_connection(request, version)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/bus/websocket.py", line 1027, in open_connection
+    raise RuntimeError(
+RuntimeError: Couldn't bind the websocket. Is the connection opened on the evented port (8072)?
+2026-09-16 21:09:13,985 15185 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:09:13] "GET /websocket?version=19.0-2 HTTP/1.1" 500 - 1 0.002 0.008
+2026-09-16 21:09:19,971 15193 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-09-16 21:09:20,029 15193 INFO odoo19 odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-09-16 21:09:20,035 15193 INFO odoo19 odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-09-16 21:09:20,036 15193 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-16 21:09:20,068 15193 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-16 21:09:20,085 15193 INFO odoo19 odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-09-16 21:09:20,092 15193 INFO odoo19 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-09-16 21:09:20,102 15193 INFO odoo19 odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-09-16 21:09:20,124 15193 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.15s) 
+2026-09-16 21:09:24,506 15187 INFO ? odoo.service.server: Worker (15187) exiting. request_count: 13, registry count: 1. 
+2026-09-16 21:09:24,506 15183 INFO ? odoo.service.server: Worker (15183) exiting. request_count: 11, registry count: 1. 
+2026-09-16 21:09:24,506 15184 INFO ? odoo.service.server: Worker (15184) exiting. request_count: 10, registry count: 1. 
+2026-09-16 21:09:24,506 15185 INFO ? odoo.service.server: Worker (15185) exiting. request_count: 25, registry count: 1. 
+2026-09-16 21:09:24,506 15178 INFO ? odoo.service.server: Stopping workers gracefully 
+2026-09-16 21:09:24,516 15191 INFO ? odoo.service.server: Worker (15191) exiting. request_count: 2, registry count: 0. 
+2026-09-16 21:09:24,536 15193 INFO ? odoo.service.server: Worker (15193) exiting. request_count: 2, registry count: 1. 
+2026-09-16 21:38:56,201 17506 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 21:38:56,201 17506 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 21:38:56,201 17506 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 21:38:56,201 17506 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 21:38:56,201 17506 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 21:38:56,201 17506 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 21:38:56,201 17506 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 21:38:56,355 17506 INFO ? odoo.service.server: HTTP service (werkzeug) running on 127.0.0.1:8019 
+2026-09-16 21:38:56,357 17572 INFO ? odoo.service.server: Worker WorkerHTTP (17572) alive 
+2026-09-16 21:38:56,359 17573 INFO ? odoo.service.server: Worker WorkerHTTP (17573) alive 
+2026-09-16 21:38:56,359 17574 INFO ? odoo.service.server: Worker WorkerHTTP (17574) alive 
+2026-09-16 21:38:56,360 17576 INFO ? odoo.service.server: Worker WorkerHTTP (17576) alive 
+2026-09-16 21:38:56,362 17580 INFO ? odoo.service.server: Worker WorkerCron (17580) alive 
+2026-09-16 21:38:56,363 17582 INFO ? odoo.service.server: Worker WorkerCron (17582) alive 
+2026-09-16 21:38:56,569 17577 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 21:38:56,569 17577 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 21:38:56,569 17577 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 21:38:56,569 17577 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 21:38:56,569 17577 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 21:38:56,569 17577 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 21:38:56,569 17577 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 21:38:56,733 17577 INFO ? odoo.service.server: Evented Service (longpolling) running on 127.0.0.1:8072 
+2026-09-16 21:39:06,856 17572 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:39:06,861 17572 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:39:06,864 17572 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:39:06,956 17572 INFO ? odoo.modules.loading: 20 modules loaded in 0.09s, 0 queries (+0 extra) 
+2026-09-16 21:39:06,978 17572 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:39:06,986 17572 INFO ? odoo.registry: Registry loaded in 0.149s 
+2026-09-16 21:39:06,987 17572 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:39:06,999 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:06] "GET / HTTP/1.0" 303 - 29 0.018 0.145
+2026-09-16 21:39:07,123 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:07] "GET /odoo HTTP/1.0" 200 - 75 0.012 0.108
+2026-09-16 21:39:07,183 17573 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:39:07,186 17573 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,186 17576 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:39:07,189 17573 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:39:07,190 17576 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,193 17576 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:39:07,261 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:07] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 4 0.002 0.004
+2026-09-16 21:39:07,269 17574 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:39:07,272 17574 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,275 17574 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:39:07,296 17573 INFO ? odoo.modules.loading: 20 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,302 17576 INFO ? odoo.modules.loading: 20 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,308 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:07] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 15 0.006 0.013
+2026-09-16 21:39:07,327 17573 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:39:07,333 17576 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:39:07,337 17573 INFO ? odoo.registry: Registry loaded in 0.168s 
+2026-09-16 21:39:07,338 17573 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:39:07,341 17577 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:39:07,343 17576 INFO ? odoo.registry: Registry loaded in 0.171s 
+2026-09-16 21:39:07,344 17576 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:39:07,345 17577 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,349 17577 INFO ? odoo.modules.loading: loading 20 modules... 
+2026-09-16 21:39:07,358 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:07] "GET /web/webclient/load_menus HTTP/1.0" 200 - 41 0.018 0.172
+2026-09-16 21:39:07,363 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:07] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 40 0.020 0.173
+2026-09-16 21:39:07,386 17574 INFO ? odoo.modules.loading: 20 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,410 17574 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:39:07,420 17574 INFO ? odoo.registry: Registry loaded in 0.166s 
+2026-09-16 21:39:07,421 17574 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:39:07,435 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:07] "GET /web/webclient/translations?hash=4346bc85ae7edb70ece0ef3d968a960db042d5b5&lang=en_US HTTP/1.0" 200 - 23 0.014 0.169
+2026-09-16 21:39:07,455 17577 INFO ? odoo.modules.loading: 20 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 21:39:07,478 17577 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:39:07,486 17577 INFO ? odoo.registry: Registry loaded in 0.162s 
+2026-09-16 21:39:07,487 17577 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:39:07,829 17577 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-09-16 21:39:08,959 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:08] "GET /web/service-worker.js HTTP/1.0" 200 - 1 0.002 0.005
+2026-09-16 21:39:11,838 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:11] "POST /web/action/load HTTP/1.0" 200 - 10 0.010 0.012
+2026-09-16 21:39:11,896 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:11] "POST /web/dataset/call_kw/res.config.settings/get_views#res.config.settings.get_views HTTP/1.0" 200 - 13 0.005 0.014
+2026-09-16 21:39:11,924 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:11] "POST /web/dataset/call_kw/res.config.settings/onchange#res.config.settings.onchange HTTP/1.0" 200 - 36 0.007 0.010
+2026-09-16 21:39:11,952 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:11] "POST /base_setup/demo_active HTTP/1.0" 200 - 3 0.001 0.002
+2026-09-16 21:39:11,960 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:11] "POST /base_setup/data HTTP/1.0" 200 - 6 0.001 0.001
+2026-09-16 21:39:11,981 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:11] "GET /base/static/description/settings.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:15,955 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:15] "GET /odoo/settings?debug=1 HTTP/1.0" 200 - 71 0.015 0.118
+2026-09-16 21:39:15,966 17577 INFO odoo19 longpolling: 127.0.0.1 - - [2026-09-16 21:39:15] "GET /websocket?version=19.0-2 HTTP/1.1" 101 494 8.642295 
+2026-09-16 21:39:15,982 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:15] "GET /web/webclient/load_menus HTTP/1.0" 200 - 9 0.002 0.005
+2026-09-16 21:39:16,023 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "GET /web/webclient/translations?hash=4346bc85ae7edb70ece0ef3d968a960db042d5b5&lang=en_US HTTP/1.0" 200 - 2 0.001 0.003
+2026-09-16 21:39:16,024 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 18 0.006 0.007
+2026-09-16 21:39:16,025 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 3 0.001 0.002
+2026-09-16 21:39:16,049 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 8 0.002 0.004
+2026-09-16 21:39:16,058 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "POST /web/dataset/call_kw/res.config.settings/get_views#res.config.settings.get_views HTTP/1.0" 200 - 11 0.004 0.008
+2026-09-16 21:39:16,080 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "POST /web/dataset/call_kw/res.config.settings/onchange#res.config.settings.onchange HTTP/1.0" 200 - 9 0.003 0.007
+2026-09-16 21:39:16,114 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "POST /base_setup/demo_active HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:39:16,122 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:16] "POST /base_setup/data HTTP/1.0" 200 - 6 0.001 0.001
+2026-09-16 21:39:17,768 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:17] "GET /web/service-worker.js HTTP/1.0" 200 - 1 0.001 0.003
+2026-09-16 21:39:19,046 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "POST /web/action/load HTTP/1.0" 200 - 10 0.008 0.015
+2026-09-16 21:39:19,126 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 49 0.019 0.027
+2026-09-16 21:39:19,141 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 5 0.002 0.005
+2026-09-16 21:39:19,153 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 47 0.010 0.011
+2026-09-16 21:39:19,155 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 21:39:19,186 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.004 0.044
+2026-09-16 21:39:19,216 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 21:39:19,264 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /sale_management/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,274 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /pos_restaurant/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,274 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /website/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,275 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /crm/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,275 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /account/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.002
+2026-09-16 21:39:19,276 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /stock/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,279 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /accountant/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,281 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /equity/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,282 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /purchase/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,282 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /point_of_sale/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,283 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /website_sale/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,283 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /project/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,284 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /databases/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,292 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,292 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /timesheet_grid/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,292 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /mass_mailing/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,292 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_expense/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,293 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_holidays/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,293 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_ups_rest/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,300 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /data_recycle/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,300 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /frontdesk/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,300 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /knowledge/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,301 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /ai_app/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,301 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_fedex_rest/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,301 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /mrp/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,306 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_recruitment/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,307 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_dhl_rest/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,307 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /esg/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,307 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /documents/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,307 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /web_studio/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,308 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_starshipit/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,309 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_envia/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,314 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /marketing_card/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,314 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /maintenance/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,314 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /room/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,314 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /sale_lazada/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,315 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /sign/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.000
+2026-09-16 21:39:19,315 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /whatsapp/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,320 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /sale_subscription/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,320 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /helpdesk/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,320 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /quality_control/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,321 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /website_event/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,321 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /website_slides/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,322 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /planning/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,326 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /contacts/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,326 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /mrp_plm/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,327 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /sale_renting/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,328 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /industry_fsm/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,328 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /mail/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.003
+2026-09-16 21:39:19,329 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /calendar/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,332 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /social/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,332 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_appraisal/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,333 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /approvals/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,333 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /fleet/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,333 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /marketing_automation/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,334 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /im_livechat/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,340 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /appointment/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,340 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /survey/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,341 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_referral/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,341 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_attendance/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,341 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /mass_mailing_sms/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,342 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /repair/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,343 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /iot/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,346 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /project_todo/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,347 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /stock_barcode/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,347 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_payroll/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,347 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /lunch/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,348 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /voip/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,349 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /hr_skills/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,353 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_usps_rest/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,353 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_sendcloud/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,353 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_easypost/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,353 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /sale_amazon/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,354 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_shiprocket/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,354 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /website_hr_recruitment/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,358 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /sale_shopee/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,358 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /base/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:19,359 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:19] "GET /delivery_bpost/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:22,188 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:22] "POST /web/action/load HTTP/1.0" 200 - 9 0.009 0.016
+2026-09-16 21:39:22,229 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:22] "POST /web/dataset/call_kw/base.module.update/get_views#base.module.update.get_views HTTP/1.0" 200 - 14 0.004 0.011
+2026-09-16 21:39:22,240 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:22] "POST /web/dataset/call_kw/base.module.update/onchange#base.module.update.onchange HTTP/1.0" 200 - 2 0.001 0.003
+2026-09-16 21:39:23,404 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:23] "POST /web/dataset/call_kw/base.module.update/web_save#base.module.update.web_save HTTP/1.0" 200 - 5 0.006 0.010
+2026-09-16 21:39:23,424 17574 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user admin #2 via 127.0.0.1 
+2026-09-16 21:39:24,528 17574 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:39:24,528 17574 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:39:24,616 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:24] "POST /web/dataset/call_button/base.module.update/update_module#base.module.update.update_module HTTP/1.0" 200 - 3307 0.483 0.715
+2026-09-16 21:39:25,929 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:25] "POST /web/action/load HTTP/1.0" 200 - 9 0.010 0.015
+2026-09-16 21:39:25,958 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:25] "POST /web/dataset/call_kw/base.module.upgrade/get_views#base.module.upgrade.get_views HTTP/1.0" 200 - 10 0.002 0.006
+2026-09-16 21:39:25,965 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:25] "POST /web/dataset/call_kw/base.module.upgrade/onchange#base.module.upgrade.onchange HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:39:30,508 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:30] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 47 0.016 0.018
+2026-09-16 21:39:30,519 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:30] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 4 0.009 0.031
+2026-09-16 21:39:30,541 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:30] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:39:51,792 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 45 0.013 0.015
+2026-09-16 21:39:51,813 17573 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:39:51,823 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.004 0.023
+2026-09-16 21:39:51,849 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:39:51,907 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_crm/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,907 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_helpdesk_livechat/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,907 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_helpdesk_forum/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,908 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /hr_recruitment_integration_website/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,908 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /hr_recruitment_integration_website_monster/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,908 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_helpdesk_slides/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,913 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /base/static/img/country_flags/ar.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,913 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /web_unsplash/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,914 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_crm_partner_assign/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,914 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_customer/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,914 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_enterprise/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,914 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_event_sale/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,919 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_event_track/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,919 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_google_map/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,920 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_livechat/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:51,920 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:51] "GET /website_links/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:39:54,385 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:54] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.010 0.018
+2026-09-16 21:39:54,390 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:54] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 46 0.016 0.022
+2026-09-16 21:39:54,415 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:54] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:39:57,914 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:57] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 45 0.017 0.018
+2026-09-16 21:39:57,924 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:57] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.003 0.003
+2026-09-16 21:39:57,929 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:39:57] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:39:59,889 17574 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Web Root Redirect'] to user admin #2 via 127.0.0.1 
+2026-09-16 21:39:59,889 17574 INFO odoo19 odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2026-09-16 21:39:59,892 17574 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Web Root Redirect'] to user admin #2 via 127.0.0.1 
+2026-09-16 21:39:59,961 17574 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:39:59,964 17574 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:39:59,978 17574 INFO odoo19 odoo.modules.loading: updating modules list 
+2026-09-16 21:39:59,979 17574 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2026-09-16 21:40:00,835 17574 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:40:00,889 17574 INFO odoo19 odoo.modules.loading: loading 21 modules... 
+2026-09-16 21:40:00,895 17574 INFO odoo19 odoo.modules.loading: Loading module web_root_redirect (21/21) 
+2026-09-16 21:40:00,937 17574 INFO odoo19 odoo.modules.loading: Module web_root_redirect loaded in 0.04s, 10 queries (+10 other) 
+2026-09-16 21:40:00,937 17574 INFO odoo19 odoo.modules.loading: 21 modules loaded in 0.05s, 10 queries (+10 extra) 
+2026-09-16 21:40:01,058 17574 INFO odoo19 odoo.modules.loading: Modules loaded. 
+2026-09-16 21:40:01,064 17574 INFO odoo19 odoo.registry: Registry changed, signaling through the database 
+2026-09-16 21:40:01,065 17574 INFO odoo19 odoo.registry: Registry loaded in 1.117s 
+2026-09-16 21:40:01,065 17574 INFO odoo19 odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2026-09-16 21:40:01,070 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:01] "POST /web/dataset/call_button/ir.module.module/button_immediate_install#ir.module.module.button_immediate_install HTTP/1.0" 200 - 3784 0.589 0.602
+2026-09-16 21:40:01,082 17573 INFO ? odoo.registry: Reloading the model registry after database signaling. 
+2026-09-16 21:40:01,100 17573 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:40:01,105 17573 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,106 17573 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 21:40:01,113 17573 INFO ? odoo.modules.loading: 21 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,136 17573 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:40:01,139 17573 INFO ? odoo.registry: Registry loaded in 0.056s 
+2026-09-16 21:40:01,139 17573 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:40:01,266 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:01] "GET /odoo HTTP/1.0" 200 - 103 0.029 0.156
+2026-09-16 21:40:01,277 17577 INFO odoo19 longpolling: 127.0.0.1 - - [2026-09-16 21:40:01] "GET /websocket?version=19.0-2 HTTP/1.1" 101 494 45.198051 
+2026-09-16 21:40:01,299 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:01] "GET /web/webclient/load_menus HTTP/1.0" 200 - 11 0.003 0.005
+2026-09-16 21:40:01,323 17572 INFO ? odoo.registry: Reloading the model registry after database signaling. 
+2026-09-16 21:40:01,336 17572 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:40:01,339 17572 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,340 17572 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:40:01,340 17576 INFO ? odoo.registry: Reloading the model registry after database signaling. 
+2026-09-16 21:40:01,340 17572 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 21:40:01,346 17572 INFO ? odoo.modules.loading: 21 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,351 17576 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:40:01,354 17576 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,354 17576 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:40:01,355 17576 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 21:40:01,363 17576 INFO ? odoo.modules.loading: 21 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,370 17572 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:40:01,373 17572 INFO ? odoo.registry: Registry loaded in 0.049s 
+2026-09-16 21:40:01,373 17572 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:40:01,385 17576 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:40:01,388 17576 INFO ? odoo.registry: Registry loaded in 0.048s 
+2026-09-16 21:40:01,388 17576 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:40:01,389 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:01] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 39 0.017 0.050
+2026-09-16 21:40:01,398 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:01] "GET /web/webclient/translations?hash=&lang=en_US HTTP/1.0" 200 - 23 0.013 0.045
+2026-09-16 21:40:01,404 17574 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:40:01,420 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:01] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 8 0.002 0.015
+2026-09-16 21:40:01,436 17577 INFO ? odoo.registry: Reloading the model registry after database signaling. 
+2026-09-16 21:40:01,438 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:01] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 23 0.007 0.011
+2026-09-16 21:40:01,450 17577 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:40:01,452 17577 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,453 17577 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:40:01,453 17577 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 21:40:01,459 17577 INFO ? odoo.modules.loading: 21 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 21:40:01,482 17577 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 21:40:01,485 17577 INFO ? odoo.registry: Registry loaded in 0.049s 
+2026-09-16 21:40:01,485 17577 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 21:40:02,937 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:02] "GET /web/service-worker.js HTTP/1.0" 200 - 1 0.002 0.005
+2026-09-16 21:40:05,084 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:05] "POST /web/action/load HTTP/1.0" 200 - 11 0.007 0.014
+2026-09-16 21:40:05,152 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:05] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 45 0.011 0.023
+2026-09-16 21:40:05,159 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:05] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 1 0.000 0.002
+2026-09-16 21:40:05,178 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:05] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 48 0.011 0.010
+2026-09-16 21:40:05,178 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:05] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 3 0.001 0.002
+2026-09-16 21:40:05,183 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:05] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.001 0.020
+2026-09-16 21:40:05,210 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:05] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:40:09,621 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:09] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 5 0.010 0.013
+2026-09-16 21:40:09,624 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:09] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 47 0.015 0.016
+2026-09-16 21:40:09,642 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:09] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:40:11,588 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:11] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 4 0.012 0.020
+2026-09-16 21:40:11,591 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:11] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 45 0.015 0.023
+2026-09-16 21:40:11,610 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:11] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:40:17,442 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:17] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 1 0.001 5.225
+2026-09-16 21:40:17,457 17576 WARNING odoo19 odoo.http: Connection to https://apps.odoo.com failed The list of industry modules cannot be fetched 
+2026-09-16 21:40:17,458 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:17] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 1 0.002 5.240
+2026-09-16 21:40:28,936 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:28] "GET /odoo/apps HTTP/1.0" 200 - 73 0.022 0.136
+2026-09-16 21:40:28,951 17577 INFO odoo19 longpolling: 127.0.0.1 - - [2026-09-16 21:40:28] "GET /websocket?version=19.0-2 HTTP/1.1" 101 494 27.515889 
+2026-09-16 21:40:28,969 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:28] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 4 0.001 0.003
+2026-09-16 21:40:28,969 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:28] "GET /web/webclient/load_menus HTTP/1.0" 200 - 10 0.003 0.006
+2026-09-16 21:40:29,024 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "GET /web/webclient/translations?hash=c2132e219e5d7eb44159655374e0bc31ec115db1&lang=en_US HTTP/1.0" 200 - 2 0.001 0.003
+2026-09-16 21:40:29,026 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 4 0.001 0.003
+2026-09-16 21:40:29,051 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 15 0.005 0.009
+2026-09-16 21:40:29,053 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 1 0.000 0.001
+2026-09-16 21:40:29,061 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.001 0.006
+2026-09-16 21:40:29,065 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 47 0.008 0.009
+2026-09-16 21:40:29,066 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:40:29,077 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 45 0.013 0.024
+2026-09-16 21:40:29,114 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 21:40:29,851 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:29] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 1 0.002 5.026
+2026-09-16 21:40:30,944 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:30] "GET /web/service-worker.js HTTP/1.0" 200 - 1 0.002 0.005
+2026-09-16 21:40:43,896 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:40:43] "HEAD / HTTP/1.0" 303 - 2 0.003 0.015
+2026-09-16 21:41:56,632 17580 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 21:41:56,641 17580 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 21:41:56,643 17580 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 21:41:56,645 17580 INFO odoo19 odoo.modules.loading: loading 21 modules... 
+2026-09-16 21:41:56,734 17580 INFO odoo19 odoo.modules.loading: 21 modules loaded in 0.09s, 0 queries (+0 extra) 
+2026-09-16 21:41:56,756 17580 INFO odoo19 odoo.modules.loading: Modules loaded. 
+2026-09-16 21:41:56,764 17580 INFO odoo19 odoo.registry: Registry loaded in 0.171s 
+2026-09-16 21:41:56,765 17580 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-09-16 21:41:56,844 17580 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-16 21:41:56,845 17580 INFO odoo19 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-16 21:41:56,849 17580 INFO odoo19 odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-09-16 21:41:56,864 17580 INFO odoo19 odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-09-16 21:41:56,871 17580 INFO odoo19 odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-09-16 21:41:56,874 17580 INFO odoo19 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-09-16 21:41:56,893 17580 INFO odoo19 odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-09-16 21:41:56,897 17580 INFO odoo19 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.13s) 
+2026-09-16 21:42:46,489 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:46] "GET /web/static/img/favicon.ico HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 21:42:53,354 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:53] "GET / HTTP/1.0" 303 - 2 0.001 0.005
+2026-09-16 21:42:53,361 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:53] "GET /web HTTP/1.0" 303 - 2 0.001 0.004
+2026-09-16 21:42:53,425 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:53] "GET /web/login?redirect=/web? HTTP/1.0" 200 - 39 0.008 0.055
+2026-09-16 21:42:53,486 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:53] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.0" 200 - 1 0.001 0.003
+2026-09-16 21:42:53,505 17572 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/5cf0fe8/web.assets_frontend_minimal.min.js (id:20) 
+2026-09-16 21:42:53,507 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:53] "GET /web/assets/5cf0fe8/web.assets_frontend_minimal.min.js HTTP/1.0" 200 - 14 0.005 0.021
+2026-09-16 21:42:54,007 17573 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/4c91955/web.assets_frontend.min.css (id:21) 
+2026-09-16 21:42:54,009 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:54] "GET /web/assets/4c91955/web.assets_frontend.min.css HTTP/1.0" 200 - 23 0.014 0.514
+2026-09-16 21:42:54,020 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:54] "GET /web/binary/company_logo HTTP/1.0" 200 - 3 0.003 0.004
+2026-09-16 21:42:54,041 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:54] "GET /web_enterprise/static/img/background-light.svg HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 21:42:54,340 17572 INFO odoo19 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/35cd746/web.assets_frontend_lazy.min.js (id:22) 
+2026-09-16 21:42:54,342 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:54] "GET /web/assets/35cd746/web.assets_frontend_lazy.min.js HTTP/1.0" 200 - 21 0.004 0.273
+2026-09-16 21:42:54,360 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:54] "GET /web/static/img/favicon.ico HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 21:42:54,577 17572 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:42:54] "GET /web/webclient/translations?hash=&lang= HTTP/1.0" 200 - 4 0.002 0.010
+2026-09-16 21:43:04,706 17573 INFO odoo19 odoo.addons.base.models.res_users: Login failed for login:admin from 127.0.0.1 
+2026-09-16 21:43:04,746 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:04] "POST /web/login HTTP/1.0" 200 - 34 0.008 0.313
+2026-09-16 21:43:04,801 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:04] "GET /web/binary/company_logo HTTP/1.0" 304 - 3 0.002 0.005
+2026-09-16 21:43:05,244 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:05] "GET /web/webclient/translations?hash=70722ae23b44a451ca59c5dd5e3814f86d9870ef&lang= HTTP/1.0" 200 - 4 0.001 0.004
+2026-09-16 21:43:19,712 17576 INFO odoo19 odoo.addons.base.models.res_users: Login failed for login:admin from 127.0.0.1 
+2026-09-16 21:43:19,714 17576 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:19] "POST /web/login HTTP/1.0" 200 - 10 0.003 0.262
+2026-09-16 21:43:19,764 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:19] "GET /web/binary/company_logo HTTP/1.0" 304 - 3 0.002 0.004
+2026-09-16 21:43:20,265 17573 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:20] "GET /web/webclient/translations?hash=70722ae23b44a451ca59c5dd5e3814f86d9870ef&lang= HTTP/1.0" 200 - 3 0.001 0.004
+2026-09-16 21:43:21,981 17574 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:21] "GET /web/database/manager HTTP/1.0" 200 - 5 0.001 0.025
+2026-09-16 21:43:22,005 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/dist/css/bootstrap.css HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 21:43:22,007 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/util/index.js HTTP/1.0" 200 - 1 0.000 0.005
+2026-09-16 21:43:22,007 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/dom/data.js HTTP/1.0" 200 - 1 0.000 0.005
+2026-09-16 21:43:22,009 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/src/libs/fontawesome/css/font-awesome.css HTTP/1.0" 200 - 1 0.000 0.007
+2026-09-16 21:43:22,011 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/dom/manipulator.js HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 21:43:22,012 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/dom/event-handler.js HTTP/1.0" 200 - 1 0.000 0.005
+2026-09-16 21:43:22,013 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/dom/selector-engine.js HTTP/1.0" 200 - 1 0.000 0.005
+2026-09-16 21:43:22,013 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/util/config.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 21:43:22,016 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/util/backdrop.js HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 21:43:22,017 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/util/component-functions.js HTTP/1.0" 200 - 1 0.000 0.005
+2026-09-16 21:43:22,017 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/util/focustrap.js HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 21:43:22,019 17572 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/util/scrollbar.js HTTP/1.0" 200 - 1 0.000 0.005
+2026-09-16 21:43:22,021 17576 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/src/public/database_manager.js HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 21:43:22,021 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/base-component.js HTTP/1.0" 200 - 1 0.000 0.004
+2026-09-16 21:43:22,021 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/modal.js HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 21:43:22,030 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/img/logo2.png HTTP/1.0" 200 - 1 0.000 0.003
