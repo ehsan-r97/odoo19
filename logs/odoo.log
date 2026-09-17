@@ -1060,3 +1060,845 @@ RuntimeError: Couldn't bind the websocket. Is the connection opened on the event
 2026-09-16 21:43:22,021 17574 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/base-component.js HTTP/1.0" 200 - 1 0.000 0.004
 2026-09-16 21:43:22,021 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/lib/bootstrap/js/dist/modal.js HTTP/1.0" 200 - 1 0.000 0.003
 2026-09-16 21:43:22,030 17573 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 21:43:22] "GET /web/static/img/logo2.png HTTP/1.0" 200 - 1 0.000 0.003
+2026-09-16 22:43:29,500 17577 INFO odoo19 longpolling: 127.0.0.1 - - [2026-09-16 22:43:29] "GET /websocket?version=19.0-2 HTTP/1.1" 101 494 3780.314366 
+2026-09-16 22:43:29,821 17577 INFO odoo19 odoo.addons.base.models.res_device: User 2 inserts device log (3HP0pUmy27nK3ojDd266nhivXeHfUlfxfF_RSRElt8) 
+2026-09-16 23:41:01,325 17574 INFO ? odoo.service.server: Worker (17574) exiting. request_count: 45, registry count: 1. 
+2026-09-16 23:41:01,325 17576 INFO ? odoo.service.server: Worker (17576) exiting. request_count: 53, registry count: 1. 
+2026-09-16 23:41:01,325 17572 INFO ? odoo.service.server: Worker (17572) exiting. request_count: 52, registry count: 1. 
+2026-09-16 23:41:01,325 17580 INFO ? odoo.service.server: Worker (17580) exiting. request_count: 121, registry count: 1. 
+2026-09-16 23:41:01,326 17573 INFO ? odoo.service.server: Worker (17573) exiting. request_count: 69, registry count: 1. 
+2026-09-16 23:41:01,325 17506 INFO ? odoo.service.server: Stopping workers gracefully 
+2026-09-16 23:41:01,345 17582 INFO ? odoo.service.server: Worker (17582) exiting. request_count: 117, registry count: 0. 
+2026-09-16 23:41:01,523 17506 INFO ? odoo.service.server: Forced shutdown. 
+2026-09-16 23:42:00,043 27288 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:42:00,043 27288 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:42:00,043 27288 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:42:00,043 27288 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:42:00,043 27288 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:42:00,043 27288 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:42:00,043 27288 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:42:00,233 27288 INFO ? odoo.service.server: HTTP service (werkzeug) running on 127.0.0.1:8019 
+2026-09-16 23:42:00,235 27356 INFO ? odoo.service.server: Worker WorkerHTTP (27356) alive 
+2026-09-16 23:42:00,237 27357 INFO ? odoo.service.server: Worker WorkerHTTP (27357) alive 
+2026-09-16 23:42:00,237 27359 INFO ? odoo.service.server: Worker WorkerHTTP (27359) alive 
+2026-09-16 23:42:00,239 27360 INFO ? odoo.service.server: Worker WorkerHTTP (27360) alive 
+2026-09-16 23:42:00,241 27364 INFO ? odoo.service.server: Worker WorkerCron (27364) alive 
+2026-09-16 23:42:00,242 27366 INFO ? odoo.service.server: Worker WorkerCron (27366) alive 
+2026-09-16 23:42:00,468 27362 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:42:00,468 27362 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:42:00,468 27362 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:42:00,468 27362 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:42:00,468 27362 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:42:00,468 27362 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:42:00,468 27362 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:42:00,648 27362 INFO ? odoo.service.server: Evented Service (longpolling) running on 127.0.0.1:8072 
+2026-09-16 23:42:05,029 27359 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:42:05,033 27359 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,035 27359 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:42:05,036 27359 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:42:05,173 27359 INFO ? odoo.modules.loading: 21 modules loaded in 0.14s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,196 27359 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:42:05,203 27359 INFO ? odoo.registry: Registry loaded in 0.190s 
+2026-09-16 23:42:05,204 27359 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:42:05,336 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "GET /odoo/apps HTTP/1.0" 200 - 103 0.018 0.306
+2026-09-16 23:42:05,405 27360 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:42:05,405 27357 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:42:05,408 27360 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,408 27357 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,410 27360 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:42:05,410 27357 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:42:05,411 27360 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:42:05,412 27357 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:42:05,479 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "GET /web/webclient/translations?hash=c2132e219e5d7eb44159655374e0bc31ec115db1&lang=en_US HTTP/1.0" 200 - 2 0.001 0.003
+2026-09-16 23:42:05,489 27356 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:42:05,493 27356 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,496 27356 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:42:05,498 27356 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:42:05,518 27360 INFO ? odoo.modules.loading: 21 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,519 27357 INFO ? odoo.modules.loading: 21 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,525 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 15 0.006 0.009
+2026-09-16 23:42:05,550 27357 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:42:05,554 27360 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:42:05,558 27357 INFO ? odoo.registry: Registry loaded in 0.162s 
+2026-09-16 23:42:05,559 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 46 0.011 0.022
+2026-09-16 23:42:05,559 27357 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:42:05,565 27360 INFO ? odoo.registry: Registry loaded in 0.168s 
+2026-09-16 23:42:05,566 27360 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:42:05,583 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 48 0.011 0.012
+2026-09-16 23:42:05,585 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 1 0.000 0.002
+2026-09-16 23:42:05,587 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "GET /web/webclient/load_menus HTTP/1.0" 200 - 40 0.018 0.174
+2026-09-16 23:42:05,588 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 39 0.011 0.181
+2026-09-16 23:42:05,590 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:42:05,608 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.001 0.021
+2026-09-16 23:42:05,614 27356 INFO ? odoo.modules.loading: 21 modules loaded in 0.12s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,643 27356 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:42:05,649 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:42:05,652 27356 INFO ? odoo.registry: Registry loaded in 0.173s 
+2026-09-16 23:42:05,653 27356 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:42:05,666 27356 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:05] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 25 0.010 0.179
+2026-09-16 23:42:05,737 27362 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:42:05,739 27362 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,741 27362 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:42:05,743 27362 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:42:05,840 27362 INFO ? odoo.modules.loading: 21 modules loaded in 0.10s, 0 queries (+0 extra) 
+2026-09-16 23:42:05,862 27362 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:42:05,869 27362 INFO ? odoo.registry: Registry loaded in 0.142s 
+2026-09-16 23:42:05,871 27362 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:42:06,211 27362 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-09-16 23:42:07,329 27356 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:07] "GET /web/service-worker.js HTTP/1.0" 200 - 1 0.002 0.005
+2026-09-16 23:42:09,935 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:09] "GET / HTTP/1.0" 303 - 1 0.002 0.003
+2026-09-16 23:42:10,078 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:10] "GET /web HTTP/1.0" 200 - 74 0.019 0.122
+2026-09-16 23:42:10,090 27362 INFO odoo19 longpolling: 127.0.0.1 - - [2026-09-16 23:42:10] "GET /websocket?version=19.0-2 HTTP/1.1" 101 494 4.362783 
+2026-09-16 23:42:10,113 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:10] "GET /web/webclient/load_menus HTTP/1.0" 200 - 10 0.003 0.006
+2026-09-16 23:42:10,117 27356 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:10] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 18 0.005 0.006
+2026-09-16 23:42:10,163 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:10] "GET /web/webclient/translations?hash=c2132e219e5d7eb44159655374e0bc31ec115db1&lang=en_US HTTP/1.0" 200 - 2 0.001 0.003
+2026-09-16 23:42:10,167 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:10] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 4 0.001 0.004
+2026-09-16 23:42:10,198 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:10] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 16 0.005 0.010
+2026-09-16 23:42:12,485 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:12] "POST /web/action/load HTTP/1.0" 200 - 10 0.010 0.017
+2026-09-16 23:42:12,517 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:12] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 1 0.001 0.003
+2026-09-16 23:42:12,533 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:12] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:42:12,537 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:12] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 48 0.011 0.012
+2026-09-16 23:42:12,546 27356 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:12] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 4 0.003 0.027
+2026-09-16 23:42:12,551 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:12] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 48 0.016 0.031
+2026-09-16 23:42:12,563 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:12] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:42:14,043 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:14] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 45 0.014 0.018
+2026-09-16 23:42:14,057 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:14] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 4 0.010 0.030
+2026-09-16 23:42:14,078 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:14] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:42:18,511 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:18] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 47 0.009 0.009
+2026-09-16 23:42:18,519 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:18] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.003 0.002
+2026-09-16 23:42:18,530 27356 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:18] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:42:18,557 27356 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:18] "GET /web/static/img/empty_folder.svg HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 23:42:20,419 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:20] "POST /web/action/load HTTP/1.0" 200 - 9 0.003 0.004
+2026-09-16 23:42:20,434 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:20] "POST /web/dataset/call_kw/base.module.update/get_views#base.module.update.get_views HTTP/1.0" 200 - 11 0.002 0.005
+2026-09-16 23:42:20,443 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:20] "POST /web/dataset/call_kw/base.module.update/onchange#base.module.update.onchange HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:42:21,422 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:21] "POST /web/dataset/call_kw/base.module.update/web_save#base.module.update.web_save HTTP/1.0" 200 - 6 0.006 0.012
+2026-09-16 23:42:21,443 27360 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user admin #2 via 127.0.0.1 
+2026-09-16 23:42:22,621 27360 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:42:22,704 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:22] "POST /web/dataset/call_button/base.module.update/update_module#base.module.update.update_module HTTP/1.0" 200 - 3394 0.512 0.757
+2026-09-16 23:42:24,098 27356 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.010 0.019
+2026-09-16 23:42:24,103 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 50 0.017 0.022
+2026-09-16 23:42:24,120 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:42:24,148 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:42:24,160 27357 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.003 0.020
+2026-09-16 23:42:24,187 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.000 0.001
+2026-09-16 23:42:24,225 27356 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "GET /advanced_web_domain_widget/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 23:42:24,225 27360 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "GET /simplify_access_management/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 23:42:24,226 27359 INFO ? werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:24] "GET /payment_zarinpal/static/description/icon.png HTTP/1.0" 200 - 0 0.000 0.001
+2026-09-16 23:42:26,838 27359 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:26] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.002 0.002
+2026-09-16 23:42:26,844 27356 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:26] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:42:26,855 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:26] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 50 0.010 0.012
+2026-09-16 23:42:26,862 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:26] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.002 0.002
+2026-09-16 23:42:26,868 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:26] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.000 0.002
+2026-09-16 23:42:32,234 27360 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:42:32,235 27360 INFO odoo19 odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2026-09-16 23:42:32,238 27360 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:42:32,260 27360 WARNING odoo19 odoo.http: Unable to install module "zarvan_calendar" because an external dependency is not met: pandas 
+2026-09-16 23:42:32,261 27360 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:42:32] "POST /web/dataset/call_button/ir.module.module/button_immediate_install#ir.module.module.button_immediate_install HTTP/1.0" 200 - 18 0.011 0.024
+2026-09-16 23:42:50,251 27357 INFO ? odoo.service.server: Worker (27357) exiting. request_count: 9, registry count: 1. 
+2026-09-16 23:42:50,251 27360 INFO ? odoo.service.server: Worker (27360) exiting. request_count: 20, registry count: 1. 
+2026-09-16 23:42:50,251 27359 INFO ? odoo.service.server: Worker (27359) exiting. request_count: 16, registry count: 1. 
+2026-09-16 23:42:50,251 27356 INFO ? odoo.service.server: Worker (27356) exiting. request_count: 9, registry count: 1. 
+2026-09-16 23:42:50,251 27288 INFO ? odoo.service.server: Stopping workers gracefully 
+2026-09-16 23:42:50,291 27364 INFO ? odoo.service.server: Worker (27364) exiting. request_count: 0, registry count: 0. 
+2026-09-16 23:42:50,311 27366 INFO ? odoo.service.server: Worker (27366) exiting. request_count: 0, registry count: 0. 
+2026-09-16 23:43:54,397 27575 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:43:54,397 27575 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:43:54,397 27575 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:43:54,397 27575 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:43:54,397 27575 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:43:54,397 27575 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:43:54,397 27575 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:43:54,555 27575 INFO ? odoo.service.server: HTTP service (werkzeug) running on 127.0.0.1:8019 
+2026-09-16 23:43:54,557 27643 INFO ? odoo.service.server: Worker WorkerHTTP (27643) alive 
+2026-09-16 23:43:54,559 27644 INFO ? odoo.service.server: Worker WorkerHTTP (27644) alive 
+2026-09-16 23:43:54,560 27646 INFO ? odoo.service.server: Worker WorkerHTTP (27646) alive 
+2026-09-16 23:43:54,560 27647 INFO ? odoo.service.server: Worker WorkerHTTP (27647) alive 
+2026-09-16 23:43:54,562 27651 INFO ? odoo.service.server: Worker WorkerCron (27651) alive 
+2026-09-16 23:43:54,564 27653 INFO ? odoo.service.server: Worker WorkerCron (27653) alive 
+2026-09-16 23:43:54,782 27648 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:43:54,782 27648 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:43:54,782 27648 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:43:54,782 27648 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:43:54,783 27648 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:43:54,783 27648 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:43:54,783 27648 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:43:54,954 27648 INFO ? odoo.service.server: Evented Service (longpolling) running on 127.0.0.1:8072 
+2026-09-16 23:43:59,344 27646 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:43:59,353 27646 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,355 27646 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:43:59,357 27646 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:43:59,451 27646 INFO ? odoo.modules.loading: 21 modules loaded in 0.09s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,474 27646 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:43:59,480 27646 INFO ? odoo.registry: Registry loaded in 0.157s 
+2026-09-16 23:43:59,481 27646 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:43:59,488 27646 INFO odoo19 odoo.addons.base.models.res_device: User 2 inserts device log (3HP0pUmy27nK3ojDd266nhivXeHfUlfxfF_RSRElt8) 
+2026-09-16 23:43:59,616 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "GET /odoo/apps HTTP/1.0" 200 - 104 0.020 0.274
+2026-09-16 23:43:59,668 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "GET /web/webclient/load_menus HTTP/1.0" 200 - 11 0.006 0.011
+2026-09-16 23:43:59,672 27644 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:43:59,676 27644 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,678 27644 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:43:59,680 27644 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:43:59,740 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 4 0.001 0.004
+2026-09-16 23:43:59,745 27647 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:43:59,749 27647 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,750 27647 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:43:59,753 27647 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:43:59,768 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 15 0.005 0.010
+2026-09-16 23:43:59,769 27643 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:43:59,774 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 5 0.001 0.004
+2026-09-16 23:43:59,775 27643 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,776 27643 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:43:59,778 27643 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:43:59,791 27644 INFO ? odoo.modules.loading: 21 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,798 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 53 0.012 0.012
+2026-09-16 23:43:59,807 27648 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:43:59,810 27648 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,812 27648 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:43:59,816 27648 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:43:59,819 27644 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:43:59,827 27644 INFO ? odoo.registry: Registry loaded in 0.169s 
+2026-09-16 23:43:59,828 27644 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:43:59,837 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.002 0.036
+2026-09-16 23:43:59,840 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:43:59,846 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:43:59,847 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 39 0.011 0.181
+2026-09-16 23:43:59,879 27647 INFO ? odoo.modules.loading: 21 modules loaded in 0.13s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,903 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 3 0.001 0.002
+2026-09-16 23:43:59,903 27643 INFO ? odoo.modules.loading: 21 modules loaded in 0.12s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,906 27647 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:43:59,914 27647 INFO ? odoo.registry: Registry loaded in 0.179s 
+2026-09-16 23:43:59,915 27647 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:43:59,929 27647 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "GET /web/webclient/translations?hash=c2132e219e5d7eb44159655374e0bc31ec115db1&lang=en_US HTTP/1.0" 200 - 23 0.008 0.188
+2026-09-16 23:43:59,931 27643 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:43:59,939 27643 INFO ? odoo.registry: Registry loaded in 0.181s 
+2026-09-16 23:43:59,940 27643 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:43:59,946 27648 INFO ? odoo.modules.loading: 21 modules loaded in 0.13s, 0 queries (+0 extra) 
+2026-09-16 23:43:59,983 27648 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:43:59,987 27643 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:43:59] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 77 0.023 0.208
+2026-09-16 23:43:59,996 27648 INFO ? odoo.registry: Registry loaded in 0.200s 
+2026-09-16 23:43:59,997 27648 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:44:00,336 27648 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-09-16 23:44:01,116 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:01] "POST /web/action/load HTTP/1.0" 200 - 9 0.004 0.008
+2026-09-16 23:44:01,132 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:01] "POST /web/dataset/call_kw/base.module.update/get_views#base.module.update.get_views HTTP/1.0" 200 - 14 0.004 0.008
+2026-09-16 23:44:01,132 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:01] "POST /web/dataset/call_kw/base.module.update/onchange#base.module.update.onchange HTTP/1.0" 200 - 4 0.001 0.004
+2026-09-16 23:44:01,668 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:01] "GET /web/service-worker.js HTTP/1.0" 200 - 1 0.002 0.005
+2026-09-16 23:44:02,270 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:02] "POST /web/dataset/call_kw/base.module.update/web_save#base.module.update.web_save HTTP/1.0" 200 - 5 0.007 0.015
+2026-09-16 23:44:02,306 27647 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user admin #2 via 127.0.0.1 
+2026-09-16 23:44:03,551 27647 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:44:03,632 27647 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:03] "POST /web/dataset/call_button/base.module.update/update_module#base.module.update.update_module HTTP/1.0" 200 - 3325 0.560 0.788
+2026-09-16 23:44:04,552 27646 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:04] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.009 0.018
+2026-09-16 23:44:04,563 27643 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:04] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 53 0.020 0.022
+2026-09-16 23:44:04,580 27643 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:04] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:44:07,748 27647 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:07] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 51 0.019 0.018
+2026-09-16 23:44:07,758 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:07] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 3 0.004 0.003
+2026-09-16 23:44:07,764 27644 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:07] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:44:09,501 27643 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:44:09,501 27643 INFO odoo19 odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2026-09-16 23:44:09,503 27643 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:44:09,596 27643 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:44:09,598 27643 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:44:09,614 27643 INFO odoo19 odoo.modules.loading: updating modules list 
+2026-09-16 23:44:09,614 27643 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2026-09-16 23:44:10,745 27643 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:44:10,820 27643 INFO odoo19 odoo.modules.loading: loading 22 modules... 
+2026-09-16 23:44:10,826 27643 INFO odoo19 odoo.modules.loading: Loading module zarvan_calendar (22/22) 
+2026-09-16 23:44:10,834 27643 ERROR odoo19 odoo.addons.zarvan_calendar.models.jalaali_service: jdatetime library not installed. Run: pip install jdatetime>=4.1.0 
+2026-09-16 23:44:10,834 27643 CRITICAL odoo19 odoo.modules.module: Couldn't load module zarvan_calendar 
+2026-09-16 23:44:10,835 27643 WARNING odoo19 odoo.modules.loading: Transient module states were reset 
+2026-09-16 23:44:10,845 27643 ERROR odoo19 odoo.registry: Failed to load registry 
+2026-09-16 23:44:10,847 27643 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:44:10,849 27643 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:44:10,850 27643 INFO odoo19 odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:44:10,854 27643 INFO odoo19 odoo.modules.loading: 21 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:44:10,873 27643 INFO odoo19 odoo.modules.loading: Modules loaded. 
+2026-09-16 23:44:10,876 27643 INFO odoo19 odoo.registry: Registry loaded in 0.031s 
+2026-09-16 23:44:10,878 27643 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2599, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/web/controllers/dataset.py", line 38, in call_button
+    action = call_kw(request.env[model], method, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 97, in call_kw
+    result = method(recs, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 72, in check_and_log
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 493, in button_immediate_install
+    return self._button_immediate_function(self.env.registry[self._name].button_install)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 638, in _button_immediate_function
+    registry = modules.registry.Registry.new(self.env.cr.dbname, update_module=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/registry.py", line 183, in new
+    load_modules(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 464, in load_modules
+    load_module_graph(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "/home/odoo19/odoo19/odoo/modules/module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/__init__.py", line 3, in <module>
+    from . import models
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/models/__init__.py", line 6, in <module>
+    from . import jalaali_service
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/models/jalaali_service.py", line 11, in <module>
+    from jdatetime import JalaliDateConverter
+ImportError: cannot import name 'JalaliDateConverter' from 'jdatetime' (/home/odoo19/odoo19/venv/lib/python3.12/site-packages/jdatetime/__init__.py)
+2026-09-16 23:44:10,879 27643 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:44:10] "POST /web/dataset/call_button/ir.module.module/button_immediate_install#ir.module.module.button_immediate_install HTTP/1.0" 200 - 3383 0.532 0.853
+2026-09-16 23:45:02,729 27644 INFO ? odoo.service.server: Worker (27644) exiting. request_count: 8, registry count: 1. 
+2026-09-16 23:45:02,729 27646 INFO ? odoo.service.server: Worker (27646) exiting. request_count: 11, registry count: 1. 
+2026-09-16 23:45:02,729 27643 INFO ? odoo.service.server: Worker (27643) exiting. request_count: 4, registry count: 1. 
+2026-09-16 23:45:02,729 27647 INFO ? odoo.service.server: Worker (27647) exiting. request_count: 3, registry count: 1. 
+2026-09-16 23:45:02,730 27575 INFO ? odoo.service.server: Stopping workers gracefully 
+2026-09-16 23:45:02,740 27651 INFO ? odoo.service.server: Worker (27651) exiting. request_count: 1, registry count: 0. 
+2026-09-16 23:45:02,760 27653 INFO ? odoo.service.server: Worker (27653) exiting. request_count: 1, registry count: 0. 
+2026-09-16 23:45:02,935 27575 INFO ? odoo.service.server: Forced shutdown. 
+2026-09-16 23:49:29,871 28832 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:49:29,871 28832 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:49:29,871 28832 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:49:29,871 28832 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:49:29,871 28832 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:49:29,872 28832 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:49:29,872 28832 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:49:30,030 28832 INFO ? odoo.service.server: HTTP service (werkzeug) running on 127.0.0.1:8019 
+2026-09-16 23:49:30,032 28900 INFO ? odoo.service.server: Worker WorkerHTTP (28900) alive 
+2026-09-16 23:49:30,034 28901 INFO ? odoo.service.server: Worker WorkerHTTP (28901) alive 
+2026-09-16 23:49:30,035 28903 INFO ? odoo.service.server: Worker WorkerHTTP (28903) alive 
+2026-09-16 23:49:30,036 28904 INFO ? odoo.service.server: Worker WorkerHTTP (28904) alive 
+2026-09-16 23:49:30,038 28908 INFO ? odoo.service.server: Worker WorkerCron (28908) alive 
+2026-09-16 23:49:30,039 28910 INFO ? odoo.service.server: Worker WorkerCron (28910) alive 
+2026-09-16 23:49:30,274 28905 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:49:30,274 28905 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:49:30,274 28905 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:49:30,274 28905 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:49:30,274 28905 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:49:30,274 28905 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:49:30,274 28905 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:49:30,447 28905 INFO ? odoo.service.server: Evented Service (longpolling) running on 127.0.0.1:8072 
+2026-09-16 23:49:37,196 28903 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:49:37,207 28903 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,210 28903 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:49:37,212 28903 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:49:37,305 28903 INFO ? odoo.modules.loading: 21 modules loaded in 0.09s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,328 28903 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:49:37,335 28903 INFO ? odoo.registry: Registry loaded in 0.158s 
+2026-09-16 23:49:37,337 28903 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:49:37,345 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:37] "GET / HTTP/1.0" 303 - 22 0.010 0.161
+2026-09-16 23:49:37,470 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:37] "GET /web HTTP/1.0" 200 - 82 0.012 0.111
+2026-09-16 23:49:37,505 28900 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:49:37,506 28904 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:49:37,510 28900 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,511 28904 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,512 28900 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:49:37,512 28904 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:49:37,515 28900 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:49:37,515 28904 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:49:37,566 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:37] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 4 0.001 0.003
+2026-09-16 23:49:37,569 28901 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:49:37,573 28901 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,575 28901 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:49:37,577 28901 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:49:37,604 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:37] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 15 0.004 0.008
+2026-09-16 23:49:37,633 28900 INFO ? odoo.modules.loading: 21 modules loaded in 0.12s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,635 28905 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:49:37,638 28905 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,638 28904 INFO ? odoo.modules.loading: 21 modules loaded in 0.12s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,639 28905 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:49:37,643 28905 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:49:37,662 28900 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:49:37,666 28904 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:49:37,669 28900 INFO ? odoo.registry: Registry loaded in 0.176s 
+2026-09-16 23:49:37,670 28900 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:49:37,674 28904 INFO ? odoo.registry: Registry loaded in 0.177s 
+2026-09-16 23:49:37,675 28904 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:49:37,688 28900 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:37] "GET /web/webclient/load_menus HTTP/1.0" 200 - 40 0.012 0.183
+2026-09-16 23:49:37,692 28904 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:37] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 39 0.010 0.187
+2026-09-16 23:49:37,693 28901 INFO ? odoo.modules.loading: 21 modules loaded in 0.12s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,718 28901 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:49:37,725 28901 INFO ? odoo.registry: Registry loaded in 0.168s 
+2026-09-16 23:49:37,726 28901 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:49:37,736 28901 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:37] "GET /web/webclient/translations?hash=c2132e219e5d7eb44159655374e0bc31ec115db1&lang=en_US HTTP/1.0" 200 - 23 0.011 0.169
+2026-09-16 23:49:37,741 28905 INFO ? odoo.modules.loading: 21 modules loaded in 0.10s, 0 queries (+0 extra) 
+2026-09-16 23:49:37,764 28905 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:49:37,772 28905 INFO ? odoo.registry: Registry loaded in 0.154s 
+2026-09-16 23:49:37,773 28905 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:49:38,107 28905 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-09-16 23:49:38,872 28901 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:38] "POST /web/action/load HTTP/1.0" 200 - 11 0.014 0.015
+2026-09-16 23:49:38,897 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:38] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 6 0.001 0.003
+2026-09-16 23:49:38,913 28900 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:38] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 53 0.009 0.012
+2026-09-16 23:49:38,916 28900 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:38] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:49:38,929 28904 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:38] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 5 0.003 0.029
+2026-09-16 23:49:38,929 28901 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:38] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 55 0.018 0.029
+2026-09-16 23:49:38,964 28904 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:38] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.001
+2026-09-16 23:49:40,124 28904 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:40] "POST /web/action/load HTTP/1.0" 200 - 9 0.007 0.010
+2026-09-16 23:49:40,137 28901 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:40] "POST /web/dataset/call_kw/base.module.update/onchange#base.module.update.onchange HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:49:40,139 28900 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:40] "POST /web/dataset/call_kw/base.module.update/get_views#base.module.update.get_views HTTP/1.0" 200 - 14 0.003 0.008
+2026-09-16 23:49:41,283 28900 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:41] "POST /web/dataset/call_kw/base.module.update/web_save#base.module.update.web_save HTTP/1.0" 200 - 7 0.008 0.022
+2026-09-16 23:49:41,304 28903 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user admin #2 via 127.0.0.1 
+2026-09-16 23:49:42,532 28903 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:49:42,624 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:42] "POST /web/dataset/call_button/base.module.update/update_module#base.module.update.update_module HTTP/1.0" 200 - 3316 0.531 0.796
+2026-09-16 23:49:43,887 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:43] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 51 0.016 0.022
+2026-09-16 23:49:43,901 28901 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:43] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 4 0.008 0.037
+2026-09-16 23:49:43,927 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:43] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.004 0.002
+2026-09-16 23:49:46,338 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:46] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.003 0.002
+2026-09-16 23:49:46,351 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:46] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:49:46,356 28900 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:46] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 50 0.014 0.015
+2026-09-16 23:49:47,312 28903 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:49:47,312 28903 INFO odoo19 odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2026-09-16 23:49:47,314 28903 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:49:47,398 28903 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:49:47,401 28903 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:49:47,416 28903 INFO odoo19 odoo.modules.loading: updating modules list 
+2026-09-16 23:49:47,417 28903 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2026-09-16 23:49:48,217 28903 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:49:48,274 28903 INFO odoo19 odoo.modules.loading: loading 22 modules... 
+2026-09-16 23:49:48,280 28903 INFO odoo19 odoo.modules.loading: Loading module zarvan_calendar (22/22) 
+2026-09-16 23:49:48,295 28903 WARNING odoo19 py.warnings: /home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/controllers/jalaali_api.py:11: DeprecationWarning: Since 19.0, @route(type='json') is a deprecated alias to @route(type='jsonrpc')
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2599, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+  File "/home/odoo19/odoo19/odoo/addons/web/controllers/dataset.py", line 38, in call_button
+    action = call_kw(request.env[model], method, args, kwargs)
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 97, in call_kw
+    result = method(recs, *args, **kwargs)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 72, in check_and_log
+    return method(self, *args, **kwargs)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 493, in button_immediate_install
+    return self._button_immediate_function(self.env.registry[self._name].button_install)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 638, in _button_immediate_function
+    registry = modules.registry.Registry.new(self.env.cr.dbname, update_module=True)
+  File "/home/odoo19/odoo19/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "/home/odoo19/odoo19/odoo/orm/registry.py", line 183, in new
+    load_modules(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 464, in load_modules
+    load_module_graph(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "/home/odoo19/odoo19/odoo/modules/module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/__init__.py", line 5, in <module>
+    from . import controllers
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/controllers/__init__.py", line 2, in <module>
+    from . import jalaali_api
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/controllers/jalaali_api.py", line 11, in <module>
+    class JalaaliAPIController(http.Controller):
+ 
+2026-09-16 23:49:48,319 28903 INFO odoo19 odoo.registry: module zarvan_calendar: creating or updating database tables 
+2026-09-16 23:49:48,403 28903 INFO odoo19 odoo.modules.loading: loading zarvan_calendar/security/jalaali_security.xml 
+2026-09-16 23:49:48,414 28903 INFO odoo19 odoo.modules.loading: loading zarvan_calendar/security/ir.model.access.csv 
+2026-09-16 23:49:48,418 28903 INFO odoo19 odoo.modules.loading: loading zarvan_calendar/data/holiday_data.xml 
+2026-09-16 23:49:48,424 28903 WARNING odoo19 odoo.modules.loading: Transient module states were reset 
+2026-09-16 23:49:48,425 28903 ERROR odoo19 odoo.registry: Failed to load registry 
+2026-09-16 23:49:48,427 28903 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:49:48,429 28903 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:49:48,430 28903 INFO odoo19 odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:49:48,435 28903 INFO odoo19 odoo.modules.loading: 21 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-16 23:49:48,454 28903 INFO odoo19 odoo.modules.loading: Modules loaded. 
+2026-09-16 23:49:48,457 28903 INFO odoo19 odoo.registry: Registry loaded in 0.032s 
+2026-09-16 23:49:48,459 28903 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 605, in _tag_root
+    f(rec)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 460, in _tag_record
+    record = model._load_records([data], self.mode == 'update')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/models.py", line 5196, in _load_records
+    records = self._load_records_create([data['values'] for data in to_create])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/models.py", line 5103, in _load_records_create
+    records = self.create(vals_list)
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/decorators.py", line 369, in create
+    return method(self, vals_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/models/jalaali_holiday.py", line 136, in create
+    return super().create(vals_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/decorators.py", line 369, in create
+    return method(self, vals_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/models.py", line 4654, in create
+    raise ValueError(f"Invalid field {field_name!r} in {self._name!r}")
+ValueError: Invalid field 'is_national' in 'jalaali.holiday'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2599, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/web/controllers/dataset.py", line 38, in call_button
+    action = call_kw(request.env[model], method, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 97, in call_kw
+    result = method(recs, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 72, in check_and_log
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 493, in button_immediate_install
+    return self._button_immediate_function(self.env.registry[self._name].button_install)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 638, in _button_immediate_function
+    registry = modules.registry.Registry.new(self.env.cr.dbname, update_module=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/registry.py", line 183, in new
+    load_modules(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 464, in load_modules
+    load_module_graph(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 217, in load_module_graph
+    load_data(env, idref, 'init', kind='data', package=package)
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 59, in load_data
+    convert_file(env, package.name, filename, idref, mode, noupdate=kind == 'demo')
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 693, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 792, in convert_xml_import
+    obj.parse(doc.getroot())
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 663, in parse
+    self._tag_root(de)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 605, in _tag_root
+    f(rec)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 618, in _tag_root
+    raise ParseError('while parsing %s:%s, somewhere inside\n%s' % (
+odoo.tools.convert.ParseError: while parsing /home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/data/holiday_data.xml:19, somewhere inside
+<record id="holiday_nowruz_1" model="jalaali.holiday">
+            <field name="name">آغاز سال نو (نوروز)</field>
+            <field name="jalali_month">1</field>
+            <field name="jalali_day">1</field>
+            <field name="holiday_type">fixed</field>
+            <field name="is_national">True</field>
+            <field name="active">True</field>
+        </record>
+2026-09-16 23:49:48,460 28903 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:49:48] "POST /web/dataset/call_button/ir.module.module/button_immediate_install#ir.module.module.button_immediate_install HTTP/1.0" 200 - 3571 0.515 0.637
+2026-09-16 23:54:25,310 28901 INFO ? odoo.service.server: Worker (28901) exiting. request_count: 5, registry count: 1. 
+2026-09-16 23:54:25,310 28900 INFO ? odoo.service.server: Worker (28900) exiting. request_count: 6, registry count: 1. 
+2026-09-16 23:54:25,310 28903 INFO ? odoo.service.server: Worker (28903) exiting. request_count: 11, registry count: 1. 
+2026-09-16 23:54:25,310 28910 INFO ? odoo.service.server: Worker (28910) exiting. request_count: 4, registry count: 0. 
+2026-09-16 23:54:25,310 28904 INFO ? odoo.service.server: Worker (28904) exiting. request_count: 4, registry count: 1. 
+2026-09-16 23:54:25,310 28832 INFO ? odoo.service.server: Stopping workers gracefully 
+2026-09-16 23:54:25,389 28908 INFO ? odoo.service.server: Worker (28908) exiting. request_count: 4, registry count: 0. 
+2026-09-16 23:54:25,500 28832 INFO ? odoo.service.server: Forced shutdown. 
+2026-09-16 23:55:15,446 29759 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:55:15,446 29759 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:55:15,446 29759 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:55:15,446 29759 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:55:15,446 29759 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:55:15,446 29759 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:55:15,446 29759 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:55:15,603 29759 INFO ? odoo.service.server: HTTP service (werkzeug) running on 127.0.0.1:8019 
+2026-09-16 23:55:15,606 29827 INFO ? odoo.service.server: Worker WorkerHTTP (29827) alive 
+2026-09-16 23:55:15,607 29828 INFO ? odoo.service.server: Worker WorkerHTTP (29828) alive 
+2026-09-16 23:55:15,608 29830 INFO ? odoo.service.server: Worker WorkerHTTP (29830) alive 
+2026-09-16 23:55:15,609 29831 INFO ? odoo.service.server: Worker WorkerHTTP (29831) alive 
+2026-09-16 23:55:15,611 29835 INFO ? odoo.service.server: Worker WorkerCron (29835) alive 
+2026-09-16 23:55:15,612 29837 INFO ? odoo.service.server: Worker WorkerCron (29837) alive 
+2026-09-16 23:55:15,846 29832 WARNING ? odoo.tools.config: option db_name reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:55:15,846 29832 WARNING ? odoo.tools.config: option dev_mode reads 'False' in the config file at /home/odoo19/odoo19/odoo.conf but isn't a boolean option, skip 
+2026-09-16 23:55:15,846 29832 WARNING ? odoo.tools.config: unknown option 'demo' in the config file at /home/odoo19/odoo19/odoo.conf, option stored as-is, without parsing 
+2026-09-16 23:55:15,846 29832 INFO ? odoo: Odoo version 19.0+e-20260721 
+2026-09-16 23:55:15,846 29832 INFO ? odoo: Using configuration file at /home/odoo19/odoo19/odoo.conf 
+2026-09-16 23:55:15,846 29832 INFO ? odoo: addons paths: _NamespacePath(['/home/odoo19/odoo19/odoo/addons', '/home/odoo19/odoo19/filestore/addons/19.0', '/home/odoo19/odoo19/custom_addons/OCA', '/home/odoo19/odoo19/custom_addons/l10_ir', '/home/odoo19/odoo19/custom_addons/er1376']) 
+2026-09-16 23:55:15,846 29832 INFO ? odoo: database: odoo19@127.0.0.1:6432 
+2026-09-16 23:55:16,012 29832 INFO ? odoo.service.server: Evented Service (longpolling) running on 127.0.0.1:8072 
+2026-09-16 23:55:19,861 29831 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:55:19,865 29831 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:19,866 29831 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:55:19,868 29831 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:55:19,962 29831 INFO ? odoo.modules.loading: 21 modules loaded in 0.09s, 0 queries (+0 extra) 
+2026-09-16 23:55:19,984 29831 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:55:19,992 29831 INFO ? odoo.registry: Registry loaded in 0.141s 
+2026-09-16 23:55:19,993 29831 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:55:20,001 29831 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:20] "GET / HTTP/1.0" 303 - 22 0.006 0.149
+2026-09-16 23:55:20,129 29831 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:20] "GET /web HTTP/1.0" 200 - 82 0.013 0.113
+2026-09-16 23:55:20,164 29831 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:20] "GET /web/webclient/load_menus HTTP/1.0" 200 - 11 0.004 0.008
+2026-09-16 23:55:20,167 29830 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:55:20,171 29830 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,172 29830 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:55:20,174 29830 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:55:20,237 29828 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:55:20,239 29827 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:55:20,242 29828 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,244 29828 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:55:20,244 29827 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,246 29827 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:55:20,248 29828 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:55:20,250 29827 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:55:20,269 29831 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:20] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.0" 304 - 15 0.004 0.009
+2026-09-16 23:55:20,282 29830 INFO ? odoo.modules.loading: 21 modules loaded in 0.11s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,307 29830 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:55:20,316 29830 INFO ? odoo.registry: Registry loaded in 0.160s 
+2026-09-16 23:55:20,317 29830 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:55:20,333 29830 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:20] "GET /web/manifest.webmanifest HTTP/1.0" 200 - 39 0.009 0.170
+2026-09-16 23:55:20,380 29827 INFO ? odoo.modules.loading: 21 modules loaded in 0.13s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,382 29828 INFO ? odoo.modules.loading: 21 modules loaded in 0.13s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,404 29827 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:55:20,406 29828 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:55:20,412 29827 INFO ? odoo.registry: Registry loaded in 0.185s 
+2026-09-16 23:55:20,413 29827 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:55:20,414 29828 INFO ? odoo.registry: Registry loaded in 0.190s 
+2026-09-16 23:55:20,415 29828 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:55:20,425 29827 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:20] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.0" 304 - 25 0.010 0.189
+2026-09-16 23:55:20,425 29828 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:20] "GET /web/webclient/translations?hash=c2132e219e5d7eb44159655374e0bc31ec115db1&lang=en_US HTTP/1.0" 200 - 23 0.011 0.192
+2026-09-16 23:55:20,440 29832 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:55:20,442 29832 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,443 29832 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:55:20,445 29832 INFO ? odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:55:20,538 29832 INFO ? odoo.modules.loading: 21 modules loaded in 0.09s, 0 queries (+0 extra) 
+2026-09-16 23:55:20,559 29832 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-16 23:55:20,566 29832 INFO ? odoo.registry: Registry loaded in 0.134s 
+2026-09-16 23:55:20,567 29832 INFO odoo19 odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-09-16 23:55:20,902 29832 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-09-16 23:55:21,264 29827 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:21] "POST /web/action/load HTTP/1.0" 200 - 11 0.018 0.019
+2026-09-16 23:55:21,290 29830 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:21] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 6 0.001 0.004
+2026-09-16 23:55:21,307 29830 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:21] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.002
+2026-09-16 23:55:21,309 29828 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:21] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 62 0.012 0.012
+2026-09-16 23:55:21,314 29831 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:21] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.0" 200 - 45 0.014 0.026
+2026-09-16 23:55:21,323 29827 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:21] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 12 0.005 0.028
+2026-09-16 23:55:21,346 29830 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:21] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.000 0.001
+2026-09-16 23:55:24,882 29828 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:24] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 50 0.023 0.029
+2026-09-16 23:55:24,893 29828 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:24] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.002 0.003
+2026-09-16 23:55:24,929 29827 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:24] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.002 0.004
+2026-09-16 23:55:27,738 29827 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:27] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.0" 200 - 2 0.010 0.008
+2026-09-16 23:55:27,750 29827 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:27] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.0" 200 - 2 0.001 0.003
+2026-09-16 23:55:27,764 29831 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:27] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.0" 200 - 53 0.028 0.028
+2026-09-16 23:55:28,629 29831 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:55:28,629 29831 INFO odoo19 odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2026-09-16 23:55:28,634 29831 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Zarvan Persian Calendar'] to user admin #2 via 127.0.0.1 
+2026-09-16 23:55:28,704 29831 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:55:28,706 29831 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:28,720 29831 INFO odoo19 odoo.modules.loading: updating modules list 
+2026-09-16 23:55:28,721 29831 INFO odoo19 odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2026-09-16 23:55:29,857 29831 WARNING odoo19 odoo.modules.module: Missing `author` key in manifest for 'web_root_redirect', defaulting to '' 
+2026-09-16 23:55:29,932 29831 INFO odoo19 odoo.modules.loading: loading 22 modules... 
+2026-09-16 23:55:29,938 29831 INFO odoo19 odoo.modules.loading: Loading module zarvan_calendar (22/22) 
+2026-09-16 23:55:29,944 29831 WARNING odoo19 py.warnings: /home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/controllers/jalaali_api.py:11: DeprecationWarning: Since 19.0, @route(type='json') is a deprecated alias to @route(type='jsonrpc')
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2599, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+  File "/home/odoo19/odoo19/odoo/addons/web/controllers/dataset.py", line 38, in call_button
+    action = call_kw(request.env[model], method, args, kwargs)
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 97, in call_kw
+    result = method(recs, *args, **kwargs)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 72, in check_and_log
+    return method(self, *args, **kwargs)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 493, in button_immediate_install
+    return self._button_immediate_function(self.env.registry[self._name].button_install)
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 638, in _button_immediate_function
+    registry = modules.registry.Registry.new(self.env.cr.dbname, update_module=True)
+  File "/home/odoo19/odoo19/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "/home/odoo19/odoo19/odoo/orm/registry.py", line 183, in new
+    load_modules(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 464, in load_modules
+    load_module_graph(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "/home/odoo19/odoo19/odoo/modules/module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/__init__.py", line 5, in <module>
+    from . import controllers
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/controllers/__init__.py", line 2, in <module>
+    from . import jalaali_api
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/controllers/jalaali_api.py", line 11, in <module>
+    class JalaaliAPIController(http.Controller):
+ 
+2026-09-16 23:55:29,966 29831 INFO odoo19 odoo.registry: module zarvan_calendar: creating or updating database tables 
+2026-09-16 23:55:30,048 29831 INFO odoo19 odoo.modules.loading: loading zarvan_calendar/security/jalaali_security.xml 
+2026-09-16 23:55:30,058 29831 INFO odoo19 odoo.modules.loading: loading zarvan_calendar/security/ir.model.access.csv 
+2026-09-16 23:55:30,062 29831 INFO odoo19 odoo.modules.loading: loading zarvan_calendar/data/holiday_data.xml 
+2026-09-16 23:55:30,067 29831 ERROR odoo19 odoo.sql_db: bad query: b'INSERT INTO "jalaali_holiday" ("company_id", "create_date", "create_uid", "created_by", "holiday_type", "is_active", "jalali_day", "jalali_month", "name", "write_date", "write_uid") VALUES (1, \'2026-09-16T23:55:28.702730\'::timestamp, 1, 1, \'fixed\', true, 1, 1, \'{"en_US": "\\u0622\\u063a\\u0627\\u0632 \\u0633\\u0627\\u0644 \\u0646\\u0648 (\\u0646\\u0648\\u0631\\u0648\\u0632)"}\', \'2026-09-16T23:55:28.702730\'::timestamp, 1) RETURNING "id"'
+ERROR: null value in column "jalali_year" of relation "jalaali_holiday" violates not-null constraint
+DETAIL:  Failing row contains (1, null, 1, 1, 1, 1, null, 1, 1, fixed, null, {"en_US": "آغاز سال نو (نوروز)"}, null, t, 2026-09-16 23:55:28.70273, 2026-09-16 23:55:28.70273).
+ 
+2026-09-16 23:55:30,067 29831 WARNING odoo19 odoo.modules.loading: Transient module states were reset 
+2026-09-16 23:55:30,068 29831 ERROR odoo19 odoo.registry: Failed to load registry 
+2026-09-16 23:55:30,070 29831 INFO odoo19 odoo.modules.loading: loading 1 modules... 
+2026-09-16 23:55:30,072 29831 INFO odoo19 odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:30,072 29831 INFO odoo19 odoo.modules.loading: loading 21 modules... 
+2026-09-16 23:55:30,077 29831 INFO odoo19 odoo.modules.loading: 21 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-09-16 23:55:30,097 29831 INFO odoo19 odoo.modules.loading: Modules loaded. 
+2026-09-16 23:55:30,099 29831 INFO odoo19 odoo.registry: Registry loaded in 0.031s 
+2026-09-16 23:55:30,101 29831 ERROR odoo19 odoo.http: Exception during request handling. 
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 605, in _tag_root
+    f(rec)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 460, in _tag_record
+    record = model._load_records([data], self.mode == 'update')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/models.py", line 5196, in _load_records
+    records = self._load_records_create([data['values'] for data in to_create])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/models.py", line 5103, in _load_records_create
+    records = self.create(vals_list)
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/decorators.py", line 369, in create
+    return method(self, vals_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/models/jalaali_holiday.py", line 136, in create
+    return super().create(vals_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/decorators.py", line 369, in create
+    return method(self, vals_list)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/models.py", line 4711, in create
+    records = self._create(data_list)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/models.py", line 4887, in _create
+    cr.execute(SQL(
+  File "/home/odoo19/odoo19/odoo/sql_db.py", line 440, in execute
+    self._obj.execute(query, params)
+psycopg2.errors.NotNullViolation: null value in column "jalali_year" of relation "jalaali_holiday" violates not-null constraint
+DETAIL:  Failing row contains (1, null, 1, 1, 1, 1, null, 1, 1, fixed, null, {"en_US": "آغاز سال نو (نوروز)"}, null, t, 2026-09-16 23:55:28.70273, 2026-09-16 23:55:28.70273).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/odoo19/odoo19/odoo/http.py", line 2856, in __call__
+    response = request._serve_db()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2331, in _serve_db
+    raise self._update_served_exception(exc)
+  File "/home/odoo19/odoo19/odoo/http.py", line 2329, in _serve_db
+    return service_model.retrying(serve_func, env=self.env)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 188, in retrying
+    result = func()
+             ^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2384, in _serve_ir_http
+    response = self.dispatcher.dispatch(rule.endpoint, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 2599, in dispatch
+    result = self.request.registry['ir.http']._dispatch(endpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_http.py", line 353, in _dispatch
+    result = endpoint(**request.params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/http.py", line 838, in route_wrapper
+    result = endpoint(self, *args, **params_ok)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/web/controllers/dataset.py", line 38, in call_button
+    action = call_kw(request.env[model], method, args, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/service/model.py", line 97, in call_kw
+    result = method(recs, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 72, in check_and_log
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 493, in button_immediate_install
+    return self._button_immediate_function(self.env.registry[self._name].button_install)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/addons/base/models/ir_module.py", line 638, in _button_immediate_function
+    registry = modules.registry.Registry.new(self.env.cr.dbname, update_module=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/tools/func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/odoo19/odoo19/odoo/orm/registry.py", line 183, in new
+    load_modules(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 464, in load_modules
+    load_module_graph(
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 217, in load_module_graph
+    load_data(env, idref, 'init', kind='data', package=package)
+  File "/home/odoo19/odoo19/odoo/modules/loading.py", line 59, in load_data
+    convert_file(env, package.name, filename, idref, mode, noupdate=kind == 'demo')
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 693, in convert_file
+    convert_xml_import(env, module, fp, idref, mode, noupdate)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 792, in convert_xml_import
+    obj.parse(doc.getroot())
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 663, in parse
+    self._tag_root(de)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 605, in _tag_root
+    f(rec)
+  File "/home/odoo19/odoo19/odoo/tools/convert.py", line 618, in _tag_root
+    raise ParseError('while parsing %s:%s, somewhere inside\n%s' % (
+odoo.tools.convert.ParseError: while parsing /home/odoo19/odoo19/custom_addons/er1376/zarvan_calendar/data/holiday_data.xml:19, somewhere inside
+<record id="holiday_nowruz_1" model="jalaali.holiday">
+            <field name="name">آغاز سال نو (نوروز)</field>
+            <field name="jalali_month">1</field>
+            <field name="jalali_day">1</field>
+            <field name="holiday_type">fixed</field>
+            <field name="is_active">True</field>
+        </record>
+2026-09-16 23:55:30,103 29831 INFO odoo19 werkzeug: 127.0.0.1 - - [16/Sep/2026 23:55:30] "POST /web/dataset/call_button/ir.module.module/button_immediate_install#ir.module.module.button_immediate_install HTTP/1.0" 200 - 3575 0.588 0.894
+2026-09-16 23:59:05,944 29827 INFO ? odoo.service.server: Worker (29827) exiting. request_count: 6, registry count: 1. 
+2026-09-16 23:59:05,944 29831 INFO ? odoo.service.server: Worker (29831) exiting. request_count: 7, registry count: 1. 
+2026-09-16 23:59:05,944 29828 INFO ? odoo.service.server: Worker (29828) exiting. request_count: 4, registry count: 1. 
+2026-09-16 23:59:05,944 29830 INFO ? odoo.service.server: Worker (29830) exiting. request_count: 4, registry count: 1. 
+2026-09-16 23:59:05,944 29759 INFO ? odoo.service.server: Stopping workers gracefully 
+2026-09-16 23:59:05,994 29835 INFO ? odoo.service.server: Worker (29835) exiting. request_count: 3, registry count: 0. 
+2026-09-16 23:59:06,014 29837 INFO ? odoo.service.server: Worker (29837) exiting. request_count: 3, registry count: 0. 
+2026-09-16 23:59:06,143 29759 INFO ? odoo.service.server: Forced shutdown. 
